@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>오늘의 핫딜 · 육아·생활·음식</title>
+<meta name="description" content="매일 아침 업데이트되는 육아·생활·음식 핫딜 모음">
+<meta name="theme-color" content="#f7f8fb">
+<meta name="color-scheme" content="light">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="오늘의 핫딜">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='88'>🛍️</text></svg>">
+<style>
+  :root{
+    --bg:#f5f6f9;
+    --card:#ffffff;
+    --ink:#16181d;
+    --ink-1:#3c414d;
+    --ink-2:#7c8290;
+    --line:#e7e9ef;
+    --accent:#2f5cf6;
+    --accent-deep:#2447c9;
+    --price:#e02f45;
+    --baby:#c2417a;   --baby-bg:#fdeef4;
+    --living:#0f857a; --living-bg:#e8f7f4;
+    --food:#b26a09;   --food-bg:#fdf1e0;
+    --ok:#0b7a52;     --ok-bg:#e9f7f0;
+    --radius:20px;
+    --shadow:0 1px 2px rgba(16,24,40,.04), 0 10px 24px -20px rgba(16,24,40,.38);
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Noto Sans KR",system-ui,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    -webkit-tap-highlight-color:transparent;
+    word-break:keep-all;
+  }
+  button{font-family:inherit}
+  a{color:inherit}
+
+  /* ── header ───────────────────────────── */
+  .hero{
+    position:relative;
+    padding:calc(16px + env(safe-area-inset-top)) 18px 14px;
+    background:
+      radial-gradient(120% 90% at 88% -12%, #e2eaff 0%, rgba(226,234,255,0) 58%),
+      radial-gradient(90% 80% at -5% -5%, #fde9f1 0%, rgba(253,233,241,0) 52%),
+      #f8f9fc;
+  }
+  .hero-top{display:flex;align-items:center;gap:11px}
+  .mark{
+    width:42px;height:42px;flex:0 0 42px;border-radius:13px;
+    display:grid;place-items:center;font-size:21px;line-height:1;
+    background:linear-gradient(150deg,#ffffff,#edf0f8);
+    border:1px solid #e4e7ef;
+    box-shadow:0 4px 10px -6px rgba(23,32,64,.35);
+  }
+  .brand-txt{min-width:0}
+  h1{
+    margin:0;font-size:20px;line-height:1.24;font-weight:800;letter-spacing:-.035em;
+  }
+  .brand-sub{
+    margin:3px 0 0;font-size:11.5px;font-weight:600;color:var(--ink-2);letter-spacing:-.01em;
+  }
+  .icon-btn{
+    margin-left:auto;flex:0 0 40px;width:40px;height:40px;border-radius:50%;
+    display:grid;place-items:center;border:1px solid #e3e6ee;background:#fff;color:#4d5464;
+    cursor:pointer;box-shadow:0 1px 2px rgba(16,24,40,.04);
+  }
+  .icon-btn:active{transform:scale(.94)}
+  .icon-btn svg{width:18px;height:18px}
+  .icon-btn.spin svg{animation:spin .8s linear}
+  @keyframes spin{to{transform:rotate(360deg)}}
+
+  .date-line{
+    display:flex;align-items:center;gap:8px;flex-wrap:wrap;
+    margin-top:14px;font-size:13px;font-weight:650;color:#4d5464;letter-spacing:-.01em;
+  }
+  .date-line .dot{width:3px;height:3px;border-radius:50%;background:#c2c8d4}
+  .date-line .upd{color:var(--ink-2);font-weight:600}
+  .summary{
+    margin:9px 0 0;font-size:14px;line-height:1.45;color:#404653;letter-spacing:-.01em;
+  }
+  .summary b{font-weight:800;color:#111318}
+
+  .search{
+    display:flex;align-items:center;gap:8px;height:46px;margin-top:14px;padding:0 12px;
+    background:#fff;border:1px solid #e3e6ee;border-radius:14px;
+    box-shadow:0 1px 2px rgba(16,24,40,.03);
+  }
+  .search:focus-within{border-color:#b9c9fb;box-shadow:0 0 0 3px rgba(47,92,246,.1)}
+  .search svg{width:18px;height:18px;flex:0 0 18px;color:#9299a8}
+  .search input{
+    flex:1;min-width:0;height:100%;border:0;outline:0;background:transparent;
+    font-size:16px;color:var(--ink);font-family:inherit;letter-spacing:-.01em;
+  }
+  .search input::placeholder{color:#a6acb9}
+  .search input::-webkit-search-cancel-button,.search input::-webkit-search-decoration{-webkit-appearance:none;appearance:none}
+  .clear-q{
+    flex:0 0 22px;width:22px;height:22px;border:0;border-radius:50%;padding:0;
+    background:#e9ecf3;color:#69707f;font-size:14px;line-height:1;cursor:pointer;
+  }
+
+  /* ── sticky controls ──────────────────── */
+  .toolbar{
+    position:sticky;top:0;z-index:30;
+    padding:10px 0 8px;
+    background:rgba(247,248,252,.92);
+    border-bottom:1px solid rgba(226,229,237,.85);
+    -webkit-backdrop-filter:saturate(180%) blur(14px);
+    backdrop-filter:saturate(180%) blur(14px);
+  }
+  .tabs,.chips{
+    display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;
+    -webkit-overflow-scrolling:touch;
+  }
+  .tabs::-webkit-scrollbar,.chips::-webkit-scrollbar{display:none}
+  .tabs{padding:0 14px}
+  .tab{
+    flex:0 0 auto;display:inline-flex;align-items:center;gap:5px;height:38px;padding:0 13px;
+    border:1px solid transparent;border-radius:999px;background:transparent;
+    font-size:14px;font-weight:650;color:#4b5160;letter-spacing:-.015em;white-space:nowrap;
+    cursor:pointer;transition:background .16s,color .16s,box-shadow .16s;
+  }
+  .tab .ico{font-size:13.5px;line-height:1}
+  .tab .n{font-size:11px;font-weight:750;color:#9aa0ae}
+  .tab[aria-selected="true"]{
+    background:#17191f;color:#fff;box-shadow:0 8px 16px -10px rgba(0,0,0,.85);
+  }
+  .tab[aria-selected="true"] .n{color:rgba(255,255,255,.62)}
+  .chips{padding:8px 14px 2px}
+  .chip{
+    flex:0 0 auto;height:32px;padding:0 12px;border-radius:999px;
+    border:1px solid #e0e3eb;background:#fff;color:#565d6c;
+    font-size:13px;font-weight:650;letter-spacing:-.015em;white-space:nowrap;cursor:pointer;
+    transition:background .16s,border-color .16s,color .16s;
+  }
+  .chip[aria-pressed="true"]{
+    background:#eaf0ff;border-color:#b7c8fd;color:var(--accent-deep);
+  }
+
+  /* ── list ─────────────────────────────── */
+  .wrap{
+    max-width:820px;margin:0 auto;
+    padding:12px 14px calc(26px + env(safe-area-inset-bottom));
+  }
+  .list-head{
+    display:flex;align-items:center;justify-content:space-between;gap:10px;
+    margin:2px 2px 10px;min-height:20px;
+    font-size:12.5px;font-weight:650;color:#6d7382;letter-spacing:-.01em;
+  }
+  .reset{
+    border:0;background:none;padding:4px 2px;cursor:pointer;
+    font-size:12.5px;font-weight:700;color:var(--accent);
+  }
+  .source-note{
+    margin:0 2px 10px;padding:8px 11px;border-radius:10px;
+    background:#fff7e6;border:1px solid #f4e2b9;color:#8a6213;
+    font-size:11.5px;font-weight:600;line-height:1.45;
+  }
+  .list{display:grid;grid-template-columns:1fr;gap:12px}
+  @media (min-width:720px){.list{grid-template-columns:1fr 1fr}}
+  .card{
+    position:relative;background:var(--card);border:1px solid #e8eaef;border-radius:var(--radius);
+    padding:14px 15px 15px;box-shadow:var(--shadow);
+  }
+  .list.animated .card{animation:rise .34s cubic-bezier(.2,.7,.3,1) both;animation-delay:calc(var(--i,0) * 20ms)}
+  @keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+  .card-head{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+  .cat{
+    display:inline-flex;align-items:center;gap:3px;padding:4px 8px;border-radius:7px;
+    font-size:11.5px;font-weight:750;letter-spacing:-.02em;
+  }
+  .cat-baby{background:var(--baby-bg);color:var(--baby)}
+  .cat-living{background:var(--living-bg);color:var(--living)}
+  .cat-food{background:var(--food-bg);color:var(--food)}
+  .cat-etc{background:#eef0f5;color:#5b6272}
+  .mall{font-size:12.5px;font-weight:750;color:#3a4150;letter-spacing:-.02em;margin-left:1px}
+  .tag{
+    padding:3px 6px;border-radius:6px;background:#f2f4f9;color:#5c6373;
+    font-size:10.5px;font-weight:700;letter-spacing:-.01em;
+  }
+  .wish{
+    margin-left:auto;flex:0 0 34px;width:34px;height:34px;display:grid;place-items:center;
+    border:0;border-radius:50%;background:transparent;color:#bcc2ce;cursor:pointer;
+    transition:color .15s,transform .12s;
+  }
+  .wish:active{transform:scale(.88)}
+  .wish svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linejoin:round;stroke-linecap:round}
+  .wish.on{color:#ff466b}
+  .wish.on svg{fill:currentColor;stroke:currentColor}
+  .title{
+    margin:8px 0 0;font-size:15.5px;line-height:1.42;font-weight:650;
+    letter-spacing:-.025em;color:#15171c;
+  }
+  .price-line{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin-top:9px}
+  .price{font-size:23px;line-height:1.12;font-weight:800;letter-spacing:-.035em;color:var(--price)}
+  .price.event{font-size:17px;letter-spacing:-.02em;color:var(--accent)}
+  .unit{font-size:12px;font-weight:650;color:#8b91a0;letter-spacing:-.01em}
+  .compare{display:flex;gap:8px;flex-wrap:wrap;margin-top:3px;font-size:12.5px;color:#8a90a0;letter-spacing:-.01em}
+  .compare .was{text-decoration:line-through;text-decoration-color:#c9ced8}
+  .compare .ref{font-weight:600;color:#6d7384}
+  .saving{
+    display:inline-flex;align-items:center;gap:4px;margin:8px 0 0;padding:5px 8px;
+    border-radius:8px;background:var(--ok-bg);color:var(--ok);
+    font-size:12.5px;font-weight:750;letter-spacing:-.01em;
+  }
+  .meta{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin-top:10px}
+  .ship{
+    padding:4px 7px;border-radius:6px;background:#eef8f3;color:var(--ok);
+    font-size:11.5px;font-weight:700;letter-spacing:-.01em;
+  }
+  .note{font-size:11.5px;color:#8b91a0;letter-spacing:-.01em;line-height:1.4}
+  .buy{
+    display:flex;align-items:center;justify-content:center;gap:6px;
+    height:46px;margin-top:12px;border-radius:13px;text-decoration:none;
+    background:linear-gradient(180deg,#3a63f6,#2b4edb);color:#fff;
+    font-size:15px;font-weight:750;letter-spacing:-.02em;
+    box-shadow:0 8px 16px -12px rgba(47,92,246,.95);
+    transition:transform .12s;
+  }
+  .buy:active{transform:scale(.985)}
+  .buy .arrow{font-size:13px;opacity:.82;transform:translateY(-1px)}
+  .buy.soft{
+    background:#f0f4fd;color:var(--accent-deep);border:1px solid #d8e2fb;box-shadow:none;
+  }
+
+  .empty{
+    padding:52px 20px 40px;text-align:center;color:#828896;
+  }
+  .empty .emoji{font-size:34px;line-height:1}
+  .empty h3{margin:12px 0 0;font-size:15px;font-weight:750;color:#3c4250;letter-spacing:-.02em}
+  .empty p{margin:6px 0 0;font-size:12.5px;line-height:1.55;font-weight:550}
+
+  .skel{
+    height:196px;border-radius:var(--radius);
+    background:linear-gradient(100deg,#eceef3 22%,#f6f7fa 36%,#eceef3 52%);
+    background-size:300% 100%;animation:shimmer 1.15s linear infinite;
+  }
+  @keyframes shimmer{from{background-position:120% 0}to{background-position:-60% 0}}
+
+  footer{
+    padding:6px 24px calc(22px + env(safe-area-inset-bottom));
+    text-align:center;font-size:11px;line-height:1.7;color:#9ba1ae;letter-spacing:-.01em;
+  }
+  footer b{font-weight:700;color:#7c8290}
+
+  .toast{
+    position:fixed;left:50%;bottom:calc(22px + env(safe-area-inset-bottom));z-index:60;
+    transform:translate(-50%,14px);opacity:0;pointer-events:none;
+    padding:10px 16px;border-radius:999px;background:rgba(22,24,29,.93);color:#fff;
+    font-size:12.5px;font-weight:650;letter-spacing:-.01em;white-space:nowrap;
+    transition:opacity .2s,transform .2s;
+    box-shadow:0 10px 24px -12px rgba(0,0,0,.6);
+  }
+  .toast.show{opacity:1;transform:translate(-50%,0)}
+
+  @media (prefers-reduced-motion: reduce){
+    *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-top">
+    <div class="mark" aria-hidden="true">🛍️</div>
+    <div class="brand-txt">
+      <h1>오늘의 핫딜</h1>
+      <p class="brand-sub">육아 · 생활 · 음식, 매일 아침 업데이트</p>
+    </div>
+    <button class="icon-btn" id="refreshBtn" type="button" aria-label="새로고침" title="새로고침">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11a8 8 0 1 0-.6 4"/><path d="M20 5v6h-6"/></svg>
+    </button>
+  </div>
+
+  <div class="date-line">
+    <span id="todayDate">오늘의 딜</span>
+    <span class="dot" aria-hidden="true"></span>
+    <span class="upd" id="updatedAt">불러오는 중</span>
+  </div>
+  <p class="summary" id="summary">오늘의 딜을 불러오고 있어요…</p>
+
+  <div class="search">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/></svg>
+    <input id="searchInput" type="search" inputmode="search" enterkeyhint="search"
+           placeholder="상품명 · 브랜드 · 쇼핑몰 검색" aria-label="딜 검색" autocomplete="off" autocorrect="off" spellcheck="false">
+    <button class="clear-q" id="clearSearch" type="button" aria-label="검색어 지우기" hidden>✕</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <div class="tabs" id="tabs" role="tablist" aria-label="카테고리"></div>
+  <div class="chips" id="chips" aria-label="쇼핑몰 필터"></div>
+</div>
+
+<main class="wrap">
+  <div class="list-head">
+    <span id="resultCount" aria-live="polite">불러오는 중</span>
+    <button class="reset" id="resetFilter" type="button" hidden>필터 초기화</button>
+  </div>
+  <p class="source-note" id="sourceNote" hidden></p>
+  <section class="list" id="list" aria-label="핫딜 목록">
+    <div class="skel"></div><div class="skel"></div><div class="skel"></div>
+  </section>
+  <div class="empty" id="empty" hidden>
+    <div class="emoji" aria-hidden="true">🧺</div>
+    <h3>조건에 맞는 딜이 없어요</h3>
+    <p>다른 카테고리나 쇼핑몰을 골라 보세요.</p>
+  </div>
+</main>
+
+<footer>
+  <b>매일 아침 07:35 업데이트</b> · 데이터 파일 deals.json<br>
+  가격·재고·쿠폰 조건은 각 쇼핑몰 사정에 따라 달라질 수 있어요.
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<noscript>
+  <div style="padding:24px;text-align:center;font-size:14px;color:#555b68">딜을 보려면 자바스크립트를 켜 주세요.</div>
+</noscript>
+
+<script id="fallback-deals" type="application/json">
+{"schemaVersion":1,"date":"2026-11-25","updatedAt":"2026-11-25T08:50:00+09:00","malls":["쿠팡","무신사","지마켓","옥션","SSG","컬리","네이버","오늘의집","베이비빌리","GS샵"],"deals":[{"id":"baby-babybilly-mammaweek","category":"baby","mall":"베이비빌리","tag":"맘마위크","title":"맘마위크 — 이유식·유아식·아기 간식 전용 쿠폰팩","price":null,"priceText":"쿠폰팩 행사","unit":null,"was":null,"refs":[],"saving":null,"shipping":"빌리쇼핑","note":"접속 시 전용 쿠폰팩 제공 · 인기 옵션 조기 품절","url":"https://babybilly.app/ko","linkLabel":"베이비빌리 열기","linkType":"app"},{"id":"baby-bebeblanc-detergent-1plus1","category":"baby","mall":"네이버","tag":"1+1","title":"베베블랑 아기세제·섬유유연제 1+1","price":9960,"priceText":"9,960원","unit":null,"was":null,"refs":[],"saving":null,"shipping":null,"note":"맘가이드 A등급 · 쿠폰 적용가","url":"https://search.shopping.naver.com/search/all?query=%EB%B2%A0%EB%B2%A0%EB%B8%94%EB%9E%91%20%EC%84%B8%EC%A0%9C","linkLabel":"네이버에서 찾기","linkType":"search"},{"id":"baby-dalgom-wipes-80x10","category":"baby","mall":"네이버","tag":"10팩","title":"달곰 데일리캡 아기물티슈 80매 10팩","price":9900,"priceText":"9,900원","unit":"1팩당 990원","was":null,"refs":[],"saving":null,"shipping":"무료배송","note":"80매 × 10팩","url":"https://search.shopping.naver.com/search/all?query=%EB%8B%AC%EA%B3%B0%20%EB%8D%B0%EC%9D%BC%EB%A6%AC%EC%BA%A1%20%EB%AC%BC%ED%8B%B0%EC%8A%88","linkLabel":"네이버에서 찾기","linkType":"search"},{"id":"baby-aveeno-night-balm-2pack","category":"baby","mall":"오늘의집","tag":"2개+증정","title":"아비노베이비 더멕사 아토 나이트밤 312g 2개+증정","price":29824,"priceText":"29,824원","unit":"1개당 14,912원","was":null,"refs":[],"saving":null,"shipping":null,"note":"집요한쿠폰 + 토스페이 적용가","url":"https://ohou.se/search?query=%EC%95%84%EB%B9%84%EB%85%B8%EB%B2%A0%EC%9D%B4%EB%B9%84%20%EB%8D%94%EB%A9%95%EC%82%AC%20%EC%95%84%ED%86%A0%20%EB%82%98%EC%9D%B4%ED%8A%B8%EB%B0%A4","linkLabel":"오늘의집에서 찾기","linkType":"search"},{"id":"baby-penelope-diaper-5-112","category":"baby","mall":"쿠팡","tag":"골드박스","title":"페넬로페 뉴 미라클 올데이 팬티 기저귀 5단계 112매","price":32850,"priceText":"32,850원","unit":"1매당 293원","was":"평소 41,800~43,800원","refs":["기존 최저 37,660원"],"saving":"기존 최저가보다 4,810원 저렴","shipping":"무료배송","note":"5단계 112매","url":"https://www.coupang.com/vp/products/8733390582?itemId=25137554343&vendorItemId=92136546348","linkLabel":"쿠팡에서 구매","linkType":"product"},{"id":"living-racuzin-steam-humidifier","category":"living","mall":"컬리","tag":"쿠폰가","title":"라쿠진 퓨어스팀 올스텐 가열식 가습기","price":122103,"priceText":"122,103원","unit":null,"was":null,"refs":[],"saving":null,"shipping":"무료배송","note":"상품쿠폰 15% + 카드 중복쿠폰 적용가","url":"https://www.kurly.com/goods/1001746731","linkLabel":"컬리에서 구매","linkType":"product"},{"id":"living-listerine-750x4","category":"living","mall":"오늘의집","tag":"증정","title":"리스테린 750ml 4개 + 450ml 증정","price":14264,"priceText":"14,264원~","unit":null,"was":null,"refs":[],"saving":null,"shipping":"무료배송","note":"매일 0·11·20시 10% 선착순 쿠폰","url":"https://ohou.se/search?query=%EB%A6%AC%EC%8A%A4%ED%85%8C%EB%A6%B0","linkLabel":"오늘의집에서 찾기","linkType":"search"},{"id":"living-belkin-3in1-qi2","category":"living","mall":"쿠팡","tag":"골드박스","title":"벨킨 3in1 Qi2 15W 마그네틱 무선 고속 충전 스탠드 WIZ034kr","price":59900,"priceText":"59,900원","unit":null,"was":"평소 89,000~98,000원대","refs":[],"saving":"평소가보다 3만 원 이상 저렴","shipping":"무료배송","note":"Qi2 15W 3in1 스탠드","url":"https://www.coupang.com/vp/products/8903680231?itemId=26001540680&vendorItemId=92983701559","linkLabel":"쿠팡에서 구매","linkType":"product"},{"id":"food-maeilbio-greek-yogurt-400x6","category":"food","mall":"무신사","tag":"무진장","title":"매일바이오 그릭요거트 무가당 플레인 400g 6개","price":17040,"priceText":"17,040원","unit":"1개당 2,840원","was":null,"refs":["타몰 최저 26,730원"],"saving":"타몰 최저가보다 약 9,700원 저렴","shipping":"무료배송","note":"무가당 플레인 400g × 6","url":"https://www.musinsa.com/products/5219766","linkLabel":"무신사에서 구매","linkType":"product"},{"id":"food-coke-sprite-190-60","category":"food","mall":"지마켓","tag":"무료배송","title":"코카콜라 + 스프라이트 190ml 60캔 + 오븐장갑","price":23900,"priceText":"23,900원","unit":"캔당 398원","was":null,"refs":["쿠팡 단품 최저 합산 26,170원"],"saving":"단품 합산보다 2,270원 저렴","shipping":"무료배송","note":"코카콜라·스프라이트 각 30캔 + 오븐장갑","url":"https://item.gmarket.co.kr/Item?goodscode=2352582075","linkLabel":"지마켓에서 구매","linkType":"product"},{"id":"food-coke-190-30","category":"food","mall":"쿠팡","tag":"골드박스","title":"코카콜라 오리지널 190ml 30개","price":13280,"priceText":"13,280원","unit":"캔당 443원","was":"평소 16,200원대","refs":["역대 최저 13,180원"],"saving":"역대 최저가에 100원 차이","shipping":null,"note":"190ml × 30캔","url":"https://www.coupang.com/vp/products/8316111472?vendorItemId=91020922010","linkLabel":"쿠팡에서 구매","linkType":"product"},{"id":"food-georgia-craft-470-24","category":"food","mall":"쿠팡","tag":"골드박스","title":"조지아 크래프트 아메리카노 470ml 24개","price":17070,"priceText":"17,070원","unit":"1병당 711원","was":"평소 22,680원","refs":["기존 최저 21,400원"],"saving":"평소가보다 약 5,600원 저렴","shipping":null,"note":"470ml × 24병","url":"https://www.coupang.com/vp/products/8245824385?itemId=27239055720&vendorItemId=94034890092","linkLabel":"쿠팡에서 구매","linkType":"product"},{"id":"food-mlekovita-milk-1l-12","category":"food","mall":"쿠팡","tag":null,"title":"믈레코비타 3.5% 멸균우유 1L 12개","price":15660,"priceText":"15,660원","unit":"1L당 1,305원","was":"3주 평균 18,339원","refs":["타몰 최저 22,300원"],"saving":"3주 평균가보다 약 2,700원 저렴","shipping":"무료배송","note":"1L × 12개","url":"https://www.coupang.com/vp/products/9536213705?itemId=22524815698&vendorItemId=91575579364","linkLabel":"쿠팡에서 구매","linkType":"product"},{"id":"food-saecheongmu-10kg","category":"food","mall":"지마켓","tag":"햅쌀","title":"26년 햅쌀 특등급 새청무 10kg","price":29340,"priceText":"29,340원","unit":"1kg당 2,934원","was":null,"refs":[],"saving":null,"shipping":"무료배송","note":"26년산 특등급","url":"https://www.gmarket.co.kr/n/search?keyword=%EC%83%88%EC%B2%AD%EB%AC%B4%2010kg","linkLabel":"지마켓에서 찾기","linkType":"search"},{"id":"food-skippy-peanut-butter-2","category":"food","mall":"지마켓","tag":"2종","title":"스키피 땅콩버터 2종 (크리미 + 청크)","price":9900,"priceText":"9,900원","unit":null,"was":null,"refs":["핫딜 평균 9,900~10,900원"],"saving":"핫딜 평균 최저 구간","shipping":"무료배송","note":"크리미 + 청크 각 1개","url":"https://www.gmarket.co.kr/n/search?keyword=%EC%8A%A4%ED%82%A4%ED%94%BC%20%EB%95%85%EC%BD%A9%EB%B2%84%ED%84%B0","linkLabel":"지마켓에서 찾기","linkType":"search"},{"id":"food-eggs-30","category":"food","mall":"옥션","tag":"특란","title":"계란 특란 30구","price":7570,"priceText":"7,570원","unit":null,"was":null,"refs":[],"saving":null,"shipping":"무료배송","note":null,"url":"https://browse.auction.co.kr/search?keyword=%EA%B3%84%EB%9E%80%20%ED%8A%B9%EB%9E%80%2030%EA%B5%AC","linkLabel":"옥션에서 찾기","linkType":"search"},{"id":"food-oyster-squid-230x2","category":"food","mall":"SSG","tag":"쿠폰가","title":"한양식품 꽃보다오징어 슬라이스 오리지날 230g + 230g","price":25536,"priceText":"25,536원","unit":null,"was":null,"refs":[],"saving":"수집 최저가","shipping":"무료배송","note":"쿠폰 적용가 · 230g × 2","url":"https://www.ssg.com/search.ssg?target=all&query=%EA%BD%83%EB%B3%B4%EB%8B%A4%EC%98%A4%EC%A7%95%EC%96%B4","linkLabel":"SSG에서 찾기","linkType":"search"},{"id":"food-jidamchae-sesame-oil-350x2","category":"food","mall":"GS샵","tag":"2병","title":"지담채 통참깨 참기름 350ml + 350ml","price":13210,"priceText":"13,210원","unit":null,"was":null,"refs":[],"saving":null,"shipping":"무료배송","note":"350ml × 2병","url":"https://www.gsshop.com/search/search?keyword=%EC%A7%80%EB%8B%B4%EC%B1%84%20%EC%B0%B8%EA%B8%B0%EB%A6%84","linkLabel":"GS샵에서 찾기","linkType":"search"}]}
+</script>
+
+<script>
+(function () {
+  'use strict';
+
+  var CACHE_KEY = 'hotdeal.cache.v1';
+  var WISH_KEY = 'hotdeal.wishlist.v1';
+
+  var CATS = [
+    { id: 'all',  label: '전체',   icon: '' },
+    { id: 'baby', label: '육아',   icon: '👶' },
+    { id: 'living', label: '생활', icon: '🏠' },
+    { id: 'food', label: '음식',   icon: '🍽️' },
+    { id: 'wish', label: '찜한 딜', icon: '⭐' }
+  ];
+  var CAT_META = {
+    baby:   { label: '육아', icon: '👶', cls: 'baby' },
+    living: { label: '생활', icon: '🏠', cls: 'living' },
+    food:   { label: '음식', icon: '🍽️', cls: 'food' }
+  };
+
+  var $ = function (id) { return document.getElementById(id); };
+  var tabsEl = $('tabs'), chipsEl = $('chips'), listEl = $('list');
+  var emptyEl = $('empty'), resultEl = $('resultCount'), resetEl = $('resetFilter');
+  var searchEl = $('searchInput'), clearEl = $('clearSearch');
+  var sourceEl = $('sourceNote'), toastEl = $('toast');
+
+  var DATA = null;
+  var SOURCE = 'fresh';
+  var wish = new Set(loadWish());
+  var state = { cat: 'all', mall: 'all', q: '' };
+  var firstRender = true;
+  var toastTimer = null;
+
+  var ESC = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
+  function esc(v) {
+    return String(v == null ? '' : v).replace(/[&<>"']/g, function (c) { return ESC[c]; });
+  }
+  function loadWish() {
+    try {
+      var raw = JSON.parse(localStorage.getItem(WISH_KEY) || '[]');
+      return Array.isArray(raw) ? raw.filter(function (x) { return typeof x === 'string'; }) : [];
+    } catch (e) { return []; }
+  }
+  function saveWish() {
+    try { localStorage.setItem(WISH_KEY, JSON.stringify(Array.from(wish))); } catch (e) {}
+  }
+  function toast(msg) {
+    toastEl.textContent = msg;
+    toastEl.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () { toastEl.classList.remove('show'); }, 1900);
+  }
+
+  /* ── data ─────────────────────────────── */
+  function readFallback() {
+    try { return JSON.parse($('fallback-deals').textContent); }
+    catch (e) { return { date: '', updatedAt: '', deals: [] }; }
+  }
+  function normalize(raw) {
+    var data = raw && typeof raw === 'object' ? raw : {};
+    data.deals = Array.isArray(data.deals) ? data.deals.filter(function (d) {
+      return d && typeof d.id === 'string' && typeof d.title === 'string';
+    }) : [];
+    if (!Array.isArray(data.malls)) data.malls = [];
+    return data;
+  }
+  function fetchData() {
+    return fetch('./deals.json?t=' + Date.now(), { cache: 'no-store' }).then(function (res) {
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      return res.json();
+    }).then(function (json) {
+      var data = normalize(json);
+      if (!data.deals.length) throw new Error('empty');
+      return data;
+    });
+  }
+  function cachedData() {
+    try {
+      var raw = localStorage.getItem(CACHE_KEY);
+      if (!raw) return null;
+      var data = normalize(JSON.parse(raw));
+      return data.deals.length ? data : null;
+    } catch (e) { return null; }
+  }
+  function saveCache(data) {
+    try { localStorage.setItem(CACHE_KEY, JSON.stringify(data)); } catch (e) {}
+  }
+
+  function load() {
+    return fetchData().then(function (data) {
+      DATA = data;
+      SOURCE = 'fresh';
+      saveCache(data);
+    }).catch(function () {
+      var cached = cachedData();
+      if (cached) { DATA = cached; SOURCE = 'cache'; }
+      else { DATA = normalize(readFallback()); SOURCE = 'fallback'; }
+    });
+  }
+
+  /* ── formatting ───────────────────────── */
+  function kstToday() {
+    var now = new Date();
+    var kst = new Date(now.getTime() + (9 * 60 + now.getTimezoneOffset()) * 60000);
+    return kst.toISOString().slice(0, 10);
+  }
+  function formatDate(iso) {
+    var d = new Date(String(iso) + 'T00:00:00+09:00');
+    if (isNaN(d.getTime())) return '';
+    try {
+      return new Intl.DateTimeFormat('ko-KR', {
+        year: 'numeric', month: 'long', day: 'numeric', weekday: 'long', timeZone: 'Asia/Seoul'
+      }).format(d);
+    } catch (e) { return iso; }
+  }
+  function formatTime(iso) {
+    var d = new Date(iso);
+    if (isNaN(d.getTime())) return '';
+    try {
+      return new Intl.DateTimeFormat('ko-KR', {
+        hour: '2-digit', minute: '2-digit', hour12: false, timeZone: 'Asia/Seoul'
+      }).format(d);
+    } catch (e) { return ''; }
+  }
+
+  /* ── header ───────────────────────────── */
+  function renderHeader() {
+    var dateStr = DATA.date || kstToday();
+    $('todayDate').textContent = formatDate(dateStr) || dateStr;
+    var time = formatTime(DATA.updatedAt);
+    $('updatedAt').textContent = time ? '업데이트 ' + time : '업데이트 시각 미정';
+
+    var c = { baby: 0, living: 0, food: 0 };
+    DATA.deals.forEach(function (d) { if (c[d.category] != null) c[d.category] += 1; });
+    $('summary').innerHTML = '오늘의 핫딜 <b>' + DATA.deals.length + '</b>건 · 육아 ' + c.baby +
+      ' · 생활 ' + c.living + ' · 음식 ' + c.food;
+
+    if (SOURCE === 'fresh') {
+      sourceEl.hidden = true;
+    } else {
+      sourceEl.hidden = false;
+      sourceEl.textContent = SOURCE === 'cache'
+        ? '저장된 오프라인 데이터를 보여드려요' + (time ? ' · ' + time + ' 기준' : '')
+        : '내장된 기본 데이터를 보여드려요 · deals.json을 불러오지 못했어요';
+    }
+  }
+
+  /* ── controls ─────────────────────────── */
+  function buildControls() {
+    var mallList = DATA.malls.slice();
+    DATA.deals.forEach(function (d) {
+      if (d.mall && mallList.indexOf(d.mall) === -1) mallList.push(d.mall);
+    });
+
+    tabsEl.innerHTML = CATS.map(function (c) {
+      return '<button class="tab" type="button" role="tab" data-cat="' + c.id + '" aria-selected="false">' +
+        (c.icon ? '<span class="ico" aria-hidden="true">' + c.icon + '</span>' : '') +
+        '<span>' + c.label + '</span><span class="n" data-count="' + c.id + '">0</span></button>';
+    }).join('');
+
+    chipsEl.innerHTML = '<button class="chip" type="button" data-mall="all" aria-pressed="true">전체</button>' +
+      mallList.map(function (m) {
+        return '<button class="chip" type="button" data-mall="' + esc(m) + '" aria-pressed="false">' + esc(m) + '</button>';
+      }).join('');
+  }
+
+  function countByCat(id) {
+    if (id === 'wish') {
+      return DATA.deals.filter(function (d) { return wish.has(d.id); }).length;
+    }
+    if (id === 'all') return DATA.deals.length;
+    return DATA.deals.filter(function (d) { return d.category === id; }).length;
+  }
+
+  function syncControls() {
+    Array.prototype.forEach.call(tabsEl.querySelectorAll('.tab'), function (btn) {
+      var id = btn.dataset.cat;
+      btn.setAttribute('aria-selected', String(state.cat === id));
+      var n = btn.querySelector('[data-count="' + id + '"]');
+      if (n) n.textContent = countByCat(id);
+    });
+    Array.prototype.forEach.call(chipsEl.querySelectorAll('.chip'), function (btn) {
+      btn.setAttribute('aria-pressed', String(state.mall === btn.dataset.mall));
+    });
+  }
+
+  /* ── filter + render ──────────────────── */
+  function matches(d) {
+    if (state.cat === 'wish') {
+      if (!wish.has(d.id)) return false;
+    } else if (state.cat !== 'all' && d.category !== state.cat) {
+      return false;
+    }
+    if (state.mall !== 'all' && d.mall !== state.mall) return false;
+    if (state.q) {
+      var cat = CAT_META[d.category];
+      var haystay = [d.title, d.mall, d.tag, d.note, d.brand, cat ? cat.label : '']
+        .filter(Boolean).join(' ').toLowerCase();
+      if (haystay.indexOf(state.q.toLowerCase()) === -1) return false;
+    }
+    return true;
+  }
+
+  function cardHTML(d, i) {
+    var cat = CAT_META[d.category] || { label: '기타', icon: '🏷️', cls: 'etc' };
+    var on = wish.has(d.id);
+    var refs = Array.isArray(d.refs) ? d.refs : [];
+    var compare = (d.was || refs.length)
+      ? '<div class="compare">' +
+          (d.was ? '<span class="was">' + esc(d.was) + '</span>' : '') +
+          refs.map(function (r) { return '<span class="ref">' + esc(r) + '</span>'; }).join('') +
+        '</div>'
+      : '';
+    var price = d.priceText || (d.price != null ? Number(d.price).toLocaleString('ko-KR') + '원' : '가격 확인');
+    var meta = (d.shipping || d.note)
+      ? '<div class="meta">' +
+          (d.shipping ? '<span class="ship">' + (/무료|로켓/.test(d.shipping) ? '🚚 ' : '📍 ') + esc(d.shipping) + '</span>' : '') +
+          (d.note ? '<span class="note">' + esc(d.note) + '</span>' : '') +
+        '</div>'
+      : '';
+
+    return '<article class="card" data-id="' + esc(d.id) + '" style="--i:' + Math.min(i, 11) + '">' +
+      '<div class="card-head">' +
+        '<span class="cat cat-' + cat.cls + '">' + cat.icon + ' ' + cat.label + '</span>' +
+        '<span class="mall">' + esc(d.mall) + '</span>' +
+        (d.tag ? '<span class="tag">' + esc(d.tag) + '</span>' : '') +
+        '<button class="wish' + (on ? ' on' : '') + '" type="button" data-wish="' + esc(d.id) + '"' +
+          ' aria-pressed="' + on + '" aria-label="' + (on ? '찜 해제' : '찜하기') + '">' +
+          '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.1C8.4 17.3 4.5 14.1 4.5 10.2 4.5 7.6 6.5 5.5 9 5.5c1.4 0 2.6.7 3 1.8.4-1.1 1.6-1.8 3-1.8 2.5 0 4.5 2.1 4.5 4.7 0 3.9-3.9 7.1-7.5 9.9z"/></svg>' +
+        '</button>' +
+      '</div>' +
+      '<h2 class="title">' + esc(d.title) + '</h2>' +
+      '<div class="price-line">' +
+        '<span class="price' + (d.price == null ? ' event' : '') + '">' + esc(price) + '</span>' +
+        (d.unit ? '<span class="unit">' + esc(d.unit) + '</span>' : '') +
+      '</div>' +
+      compare +
+      (d.saving ? '<p class="saving"><span aria-hidden="true">↓</span> ' + esc(d.saving) + '</p>' : '') +
+      meta +
+      '<a class="buy' + (d.linkType === 'search' ? ' soft' : '') + '" href="' + esc(d.url) + '"' +
+        ' target="_blank" rel="noopener noreferrer">' +
+        esc(d.linkLabel || (d.mall + '에서 보기')) +
+        '<span class="arrow" aria-hidden="true">↗</span>' +
+      '</a>' +
+    '</article>';
+  }
+
+  function render() {
+    if (!DATA) return;
+    var items = DATA.deals.filter(matches);
+
+    syncControls();
+
+    resultEl.textContent = items.length + '개 딜' +
+      (state.mall !== 'all' ? ' · ' + state.mall : '') +
+      (state.cat === 'wish' ? ' · 찜한 딜' : '');
+    resetEl.hidden = !(state.cat !== 'all' || state.mall !== 'all' || state.q);
+    clearEl.hidden = !state.q;
+
+    listEl.innerHTML = items.map(cardHTML).join('');
+    if (firstRender) {
+      listEl.classList.add('animated');
+      setTimeout(function () { listEl.classList.remove('animated'); }, 900);
+      firstRender = false;
+    }
+
+    emptyEl.hidden = items.length > 0;
+    if (items.length === 0) {
+      emptyEl.querySelector('h3').textContent = state.cat === 'wish'
+        ? '아직 찜한 딜이 없어요'
+        : '조건에 맞는 딜이 없어요';
+      emptyEl.querySelector('p').textContent = state.cat === 'wish'
+        ? '카드 오른쪽 ♥ 를 누르면 여기에 모여요.'
+        : '다른 카테고리나 쇼핑몰을 골라 보세요.';
+    }
+  }
+
+  /* ── events ───────────────────────────── */
+  tabsEl.addEventListener('click', function (e) {
+    var btn = e.target.closest('.tab');
+    if (!btn) return;
+    state.cat = btn.dataset.cat;
+    render();
+  });
+
+  chipsEl.addEventListener('click', function (e) {
+    var btn = e.target.closest('.chip');
+    if (!btn) return;
+    state.mall = btn.dataset.mall;
+    render();
+  });
+
+  listEl.addEventListener('click', function (e) {
+    var btn = e.target.closest('[data-wish]');
+    if (!btn) return;
+    var id = btn.dataset.wish;
+    if (wish.has(id)) {
+      wish.delete(id);
+      toast('찜에서 뺐어요');
+    } else {
+      wish.add(id);
+      toast('찜한 딜에 담았어요');
+    }
+    saveWish();
+    render();
+  });
+
+  searchEl.addEventListener('input', function () {
+    state.q = searchEl.value.trim();
+    render();
+  });
+  searchEl.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { searchEl.value = ''; state.q = ''; render(); }
+  });
+  clearEl.addEventListener('click', function () {
+    searchEl.value = '';
+    state.q = '';
+    searchEl.focus();
+    render();
+  });
+  resetEl.addEventListener('click', function () {
+    state.cat = 'all'; state.mall = 'all'; state.q = '';
+    searchEl.value = '';
+    render();
+  });
+
+  $('refreshBtn').addEventListener('click', function () {
+    var btn = this;
+    if (btn.classList.contains('spin')) return;
+    btn.classList.add('spin');
+    load().then(function () {
+      btn.classList.remove('spin');
+      renderHeader();
+      buildControls();
+      render();
+      toast(SOURCE === 'fresh' ? '최신 딜로 업데이트했어요' : '최신 데이터를 받지 못했어요');
+    });
+  });
+
+  /* ── boot ─────────────────────────────── */
+  load().then(function () {
+    renderHeader();
+    buildControls();
+    render();
+  });
+})();
+</script>
+</body>
+</html>
