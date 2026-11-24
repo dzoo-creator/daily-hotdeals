@@ -39,6 +39,10 @@
       "saving": "역대 최저가에 100원 차이",
       "shipping": "무료배송",
       "note": "190ml × 30캔",
+      "how_to": "쿠팡 골드박스 특가 · 별도 쿠폰 없이 바로 이 가격",
+      "coupon_links": [
+        { "label": "집요한 쿠폰 받기", "url": "https://ozip.me/..." }
+      ],
       "url": "https://www.coupang.com/...",
       "linkLabel": "쿠팡에서 구매",
       "linkType": "product"
@@ -53,6 +57,8 @@
 - `refs`: 비교 기준 문구 배열 (기존 최저가·타몰 최저가 등)
 - `saving`: 할인 근거 한 줄 (없으면 `null`)
 - `shipping`: `무료배송`, `로켓배송` 등 (없으면 `null`)
+- `how_to`: 할인 받는 방법 한 줄 (선착순 쿠폰·페이/카드 조건 등)
+- `coupon_links`: `[{ "label", "url" }]` 쿠폰·혜택 페이지 링크 (없으면 `[]`)
 - `linkType`: `product`(상품 페이지) | `search`(몰 검색 링크) | `app`
 - `malls`: 쇼핑몰 필터 칩 순서
 
