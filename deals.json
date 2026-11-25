@@ -332,12 +332,7 @@
       "shipping": "무료배송",
       "note": "무항생제·캠핑용",
       "how_to": "롯데온 쿠폰 적용 + 결제 할인 시 11,840원",
-      "coupon_links": [
-        {
-          "label": "롯데온 상품 보기",
-          "url": "https://www.lotteon.com/p/product/LO2823134893"
-        }
-      ],
+      "coupon_links": [],
       "url": "https://www.lotteon.com/p/product/LO2823134893",
       "linkLabel": "롯데온에서 구매",
       "linkType": "product"
@@ -434,12 +429,7 @@
       "shipping": "무료배송",
       "note": "형광 255·260·265 사이즈 한정",
       "how_to": "카카오페이 머니 결제 시 79,420원 (페이지 표시가 104,500원) · 형광 255·260·265 사이즈만",
-      "coupon_links": [
-        {
-          "label": "롯데온 상품 보기",
-          "url": "https://www.lotteon.com/m/product/LE1221319543"
-        }
-      ],
+      "coupon_links": [],
       "url": "https://www.lotteon.com/m/product/LE1221319543",
       "linkLabel": "롯데온에서 구매",
       "linkType": "product"
@@ -509,12 +499,7 @@
       "shipping": null,
       "note": "여기어때 회원가 · 타임특가 6% + 2만원 쿠폰 적용",
       "how_to": "여기어때 앱에서 해비치 호텔&리조트 날짜 선택 후 타임특가·2만원 쿠폰 적용 · 회원 로그인 필요",
-      "coupon_links": [
-        {
-          "label": "해비치 특가 보기",
-          "url": "https://www.yeogi.com/domestic-accommodations/6654"
-        }
-      ],
+      "coupon_links": [],
       "url": "https://www.yeogi.com/domestic-accommodations/6654",
       "linkLabel": "여기어때에서 보기",
       "linkType": "search"
@@ -534,12 +519,7 @@
       "shipping": null,
       "note": "여기어때 회원가 · 반짝특가 7% 쿠폰 적용",
       "how_to": "여기어때 앱에서 날짜 선택 후 반짝특가 7% 쿠폰 적용 · 회원 로그인 필요",
-      "coupon_links": [
-        {
-          "label": "페어몬트 특가 보기",
-          "url": "https://www.yeogi.com/domestic-accommodations/66962"
-        }
-      ],
+      "coupon_links": [],
       "url": "https://www.yeogi.com/domestic-accommodations/66962",
       "linkLabel": "여기어때에서 보기",
       "linkType": "search"
@@ -559,12 +539,7 @@
       "shipping": null,
       "note": "이스타항공 · 12/2(수) 출발 · 유류·공항료 포함",
       "how_to": "여행비교에서 날짜별 최저가 확인 후 항공사·OTA에서 예약 · 좌석·수하물 조건 확인",
-      "coupon_links": [
-        {
-          "label": "김포→제주 최저가 보기",
-          "url": "https://yeobi.kr/routes/gmp-cju"
-        }
-      ],
+      "coupon_links": [],
       "url": "https://yeobi.kr/routes/gmp-cju",
       "linkLabel": "최저가 비교하기",
       "linkType": "search"
@@ -574,7 +549,7 @@
       "category": "travel",
       "mall": "제주항공",
       "tag": "국내선",
-      "title": "제주항공 국내선 단독 할인 (제주·김포↔부산)",
+      "title": "제주항공 김포→제주 편도 항공권",
       "price": 31179,
       "priceText": "31,179원~",
       "unit": null,
@@ -584,12 +559,7 @@
       "shipping": null,
       "note": "예약 11/23~11/29 · 탑승 2027-03-27까지",
       "how_to": "제주닷컴 국내선 단독 할인 페이지에서 노선·날짜 조회 후 예약 · 총액 기준",
-      "coupon_links": [
-        {
-          "label": "제주항공 특가 보기",
-          "url": "https://www.jeju.com/event/event_view.html?agt=jeju&code=jejuair_sale"
-        }
-      ],
+      "coupon_links": [],
       "url": "https://www.jeju.com/event/event_view.html?agt=jeju&code=jejuair_sale",
       "linkLabel": "제주항공 특가 보기",
       "linkType": "search"
