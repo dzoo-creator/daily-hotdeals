@@ -221,6 +221,29 @@
       "linkType": "product"
     },
     {
+      "id": "food-tangerine-10kg",
+      "category": "food",
+      "subCategory": "fresh",
+      "mall": "지마켓",
+      "tag": "신선집중",
+      "title": "감귤나라 제주 노지 감귤 10kg 중대과(L~2L)",
+      "price": 10200,
+      "priceText": "10,200원",
+      "unit": "1kg당 1,020원",
+      "was": "타몰 최저 5kg 12,000원 (1kg당 2,400원)",
+      "refs": [
+        "10kg 환산 24,000원 기준"
+      ],
+      "saving": "약 13,800원 (58%) 저렴",
+      "shipping": "무료배송",
+      "note": "맛없으면 무료반품 · 누적구매 13만건",
+      "how_to": "G마켓 신선집중 '단하루 추가할인' 특가 · 오후 4시 전 주문 시 오늘출발",
+      "coupon_links": [],
+      "url": "https://item.gmarket.co.kr/Item?goodscode=628809631",
+      "linkLabel": "지마켓에서 구매",
+      "linkType": "product"
+    },
+    {
       "id": "food-sweet-potato-5kg",
       "category": "food",
       "subCategory": "fresh",
