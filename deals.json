@@ -449,12 +449,7 @@
       "shipping": null,
       "note": "기간한정 11/20~11/26",
       "how_to": "기간한정 특별가격 11/20~11/26 · 별도 쿠폰 없이 적용",
-      "coupon_links": [
-        {
-          "label": "유니클로 기간한정 보기",
-          "url": "https://www.uniqlo.com/kr/ko/special-feature/cp/shopping-news"
-        }
-      ],
+      "coupon_links": [],
       "url": "https://www.uniqlo.com/kr/ko/special-feature/cp/shopping-news",
       "linkLabel": "유니클로에서 보기",
       "linkType": "product"
@@ -474,12 +469,7 @@
       "shipping": null,
       "note": "키즈 · 기간한정 11/20~11/26",
       "how_to": "기간한정 특별가격 11/20~11/26 · 별도 쿠폰 없이 적용",
-      "coupon_links": [
-        {
-          "label": "유니클로 기간한정 보기",
-          "url": "https://www.uniqlo.com/kr/ko/special-feature/cp/shopping-news"
-        }
-      ],
+      "coupon_links": [],
       "url": "https://www.uniqlo.com/kr/ko/special-feature/cp/shopping-news",
       "linkLabel": "유니클로에서 보기",
       "linkType": "product"
