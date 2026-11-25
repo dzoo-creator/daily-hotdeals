@@ -27,7 +27,7 @@
       "was": null,
       "refs": [],
       "saving": null,
-      "shipping": "빌리쇼핑",
+      "shipping": null,
       "note": "이유식·유아식·아기 간식 월령별 기획전",
       "url": "https://babybilly.app/ko",
       "linkLabel": "베이비빌리 열기",
@@ -72,7 +72,7 @@
       "url": "https://search.shopping.naver.com/search/all?query=%EB%8B%AC%EA%B3%B0%20%EB%8D%B0%EC%9D%BC%EB%A6%AC%EC%BA%A1%20%EB%AC%BC%ED%8B%B0%EC%8A%88",
       "linkLabel": "네이버에서 찾기",
       "linkType": "search",
-      "how_to": "별도 쿠폰 없이 바로 이 가격 · 무료배송",
+      "how_to": "별도 쿠폰 없이 바로 이 가격",
       "coupon_links": []
     },
     {
@@ -88,7 +88,7 @@
       "refs": [],
       "saving": "11시·20시 선착순 쿠폰+토스페이 적용 시 29,824원",
       "shipping": null,
-      "note": "312g × 2개 + 증정",
+      "note": null,
       "url": "https://ohou.se/search?query=%EC%95%84%EB%B9%84%EB%85%B8%EB%B2%A0%EC%9D%B4%EB%B9%84%20%EB%8D%94%EB%A9%95%EC%82%AC%20%EC%95%84%ED%86%A0%20%EB%82%98%EC%9D%B4%ED%8A%B8%EB%B0%A4",
       "linkLabel": "오늘의집에서 찾기",
       "linkType": "search",
