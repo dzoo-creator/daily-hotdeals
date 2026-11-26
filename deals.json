@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "date": "2026-11-27",
-  "updatedAt": "2026-11-27T09:20:00+09:00",
+  "updatedAt": "2026-11-27T09:05:00+09:00",
   "malls": [
     "쿠팡",
     "지마켓",
@@ -624,6 +624,54 @@
       "how_to": "쿠팡 8,050원 · 쿠폰 없이 이 가격",
       "coupon_links": [],
       "url": "https://www.coupang.com/vp/products/8296192875?itemId=335288320",
+      "linkLabel": "쿠팡에서 구매",
+      "linkType": "product"
+    },
+    {
+      "id": "food-mealkit-mijeongdang-tteokbokki-670x4",
+      "category": "food",
+      "subCategory": "mealkit",
+      "mall": "쿠팡",
+      "tag": "3주 평균 -39% · 역대최저",
+      "title": "미정당 가래떡 쌀떡볶이 (냉동) 670g 4개",
+      "price": 12980,
+      "priceText": "12,980원",
+      "unit": "100g당 484원",
+      "was": "23,040원 → 43% 할인(쿠폰 적용) 12,980원",
+      "refs": [
+        "로우차트 11/26 현재가 12,980원 · 최근 3주 평균 21,591원",
+        "로우차트 관측 역대 최저 = 12,980원(오늘) (최고 23,040원) · 3일간 36% 하락"
+      ],
+      "saving": "3주 평균보다 8,611원(39%) 저렴 · 관측 역대 최저가",
+      "shipping": "로켓프레시 · 15,000원 이상 무료배송 · 오늘(금) 11/27 오후 8시 전 도착",
+      "note": "냉동 670g×4(총 2.68kg) · 가래떡 쌀떡볶이 · 소비기한 2027-10-02 이후 · 리뷰 315건 · 재고 6개 남음",
+      "how_to": "쿠팡 23,040원 → 쿠폰 적용 12,980원 · 옵션 4개(670g×4)",
+      "coupon_links": [],
+      "url": "https://www.coupang.com/vp/products/9580732566?itemId=28632688904",
+      "linkLabel": "쿠팡에서 구매",
+      "linkType": "product"
+    },
+    {
+      "id": "food-canned-chilgap-chaltteokbokki-1kgx5",
+      "category": "food",
+      "subCategory": "canned",
+      "mall": "쿠팡",
+      "tag": "3주 평균 -20% · 역대최저",
+      "title": "칠갑농산 찰꼬마 떡볶이 1kg 5개",
+      "price": 12580,
+      "priceText": "12,580원",
+      "unit": "100g당 252원",
+      "was": "14,800원 → 15% 할인 12,580원",
+      "refs": [
+        "로우차트 11/26 현재가 12,580원 · 최근 3주 평균 15,870원",
+        "로우차트 관측 역대 최저 = 12,580원(오늘) (최고 16,250원) · 3일간 20% 하락"
+      ],
+      "saving": "3주 평균보다 3,290원(20%) 저렴 · 관측 역대 최저가",
+      "shipping": "로켓프레시 · 15,000원 이상 무료배송 · 오늘(금) 11/27 오후 8시 전 도착(낮 12시 전 주문 시 / 서울·경기)",
+      "note": "떡볶이떡 1kg×5(총 5kg) · 냉장 파우치 · 소비기한 2027-02-02 이후 · 리뷰 2,748건",
+      "how_to": "쿠팡 12,580원 · 쿠폰 없이 이 가격 · 옵션 5개(1kg×5)",
+      "coupon_links": [],
+      "url": "https://www.coupang.com/vp/products/7849678351?itemId=21392488914",
       "linkLabel": "쿠팡에서 구매",
       "linkType": "product"
     },
