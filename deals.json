@@ -1,10 +1,10 @@
 {
  "schemaVersion": 2,
  "date": "2026-11-27",
- "updatedAt": "2026-11-27T08:00:00+09:00",
+ "updatedAt": "2026-11-27T08:20:00+09:00",
  "malls": [
-  "지마켓",
   "쿠팡",
+  "지마켓",
   "옥션",
   "무신사",
   "오늘의집",
@@ -12,34 +12,6 @@
   "여기어때"
  ],
  "deals": [
-  {
-   "id": "food-tangerine-10kg",
-   "category": "food",
-   "subCategory": "fresh",
-   "mall": "지마켓",
-   "tag": "쿠폰가",
-   "title": "감귤나라 제주 노지 감귤 10kg 중대과(L~2L)",
-   "price": 8140,
-   "priceText": "8,140원 (쿠폰가)",
-   "unit": "1kg당 814원 (100g당 81원)",
-   "was": "기존가 9,800원 → 16% 할인 쿠폰가 8,140원",
-   "refs": [
-    "쿡앤장 11/23 기준 네이버 10kg 대과(L~2L) 가운데 값 10,350원 (kg당 1,035원)"
-   ],
-   "saving": "같은 규격 10kg 가운데 값(10,350원)보다 약 2,210원(21%) 저렴",
-   "shipping": "무료배송(CJ택배) · 11/30(월) 출발",
-   "note": "제주 서귀포 노지 감귤 · L~2L(107~135g) · 맛없으면 무료반품",
-   "how_to": "상품페이지 쿠폰가 8,140원 (기존가 9,800원) · 단 하루 추가할인 표기",
-   "coupon_links": [
-    {
-     "label": "G마켓 상품페이지",
-     "url": "https://item.gmarket.co.kr/Item?goodscode=628809631"
-    }
-   ],
-   "url": "https://item.gmarket.co.kr/Item?goodscode=628809631",
-   "linkLabel": "지마켓에서 구매",
-   "linkType": "product"
-  },
   {
    "id": "food-apple-busa-5kg",
    "category": "food",
@@ -69,6 +41,35 @@
    "linkType": "product"
   },
   {
+   "id": "food-tangerine-jeju-5kg",
+   "category": "food",
+   "subCategory": "fresh",
+   "mall": "쿠팡",
+   "tag": "골드박스 78%",
+   "title": "천하일품 제주 서귀포 감귤 5kg 대과 (1박스)",
+   "price": 8100,
+   "priceText": "8,100원 (와우회원가)",
+   "unit": "1kg당 1,620원 (100g당 162원)",
+   "was": "정가 36,900원 → 골드박스 78% 할인 9,980원 → 와우회원가 8,100원",
+   "refs": [
+    "랭킹박스 5일 가격 기록 평균 10,464원 · 추적 최저 9,980원(오늘)",
+    "직전 특가 11/2 10,280원 · 리뷰 21,559건(평점 4.0)"
+   ],
+   "saving": "5일 평균(10,464원)보다 2,364원(23%) 저렴 · 와우회원 아니어도 9,980원으로 평균보다 484원 저렴",
+   "shipping": "무료배송(한진택배) · 12/3(목) 도착 예정",
+   "note": "제주 서귀포 노지 조생감귤 · 평균 12Brix · 5kg 대과 1박스 · 5kg 대과 옵션을 골라야 8,100원 (페이지 기본 노출은 10kg 중대과 15,900원)",
+   "how_to": "중량 옵션에서 '5kg 대과 × 1박스' 선택 → 와우회원 8,100원 (일반 9,980원) · 오늘 하루 골드박스 특가, 페이지에 쿠폰받기 버튼도 있음",
+   "coupon_links": [
+    {
+     "label": "쿠팡 상품페이지(5kg 대과 옵션)",
+     "url": "https://www.coupang.com/vp/products/9661792299?itemId=28883919094"
+    }
+   ],
+   "url": "https://www.coupang.com/vp/products/9661792299?itemId=28883919094",
+   "linkLabel": "쿠팡에서 구매",
+   "linkType": "product"
+  },
+  {
    "id": "food-jongga-yeolmu-2p5x2",
    "category": "food",
    "subCategory": "fresh",
@@ -85,7 +86,7 @@
    ],
    "saving": "평균가보다 약 8,370원(19%) 저렴",
    "shipping": "로켓프레시 · 15,000원 이상 무료배송(이 상품은 무료)",
-   "note": "2.5kg×2 · 소비기한 2026-12-06 이후 · 오늘(11/26) 오후 8시 전 도착",
+   "note": "2.5kg×2 · 소비기한 2026-12-06 이후 · 로켓프레시",
    "how_to": "와우회원 48% 할인가 34,750원 · 쿠폰 없이 이 가격",
    "coupon_links": [],
    "url": "https://www.coupang.com/vp/products/4583661822?itemId=19225072781&vendorItemId=86341728279",
@@ -130,7 +131,7 @@
     "딜바고 동일 구성 비교: G마켓 29,240원 · 11번가 30,370원"
    ],
    "saving": "타몰 최저가보다 약 5,600원(19%) 저렴",
-   "shipping": "무료배송(CJ택배) · 내일 11/27 출발",
+   "shipping": "무료배송(CJ택배)",
    "note": "국내산 닭다리 · 튀기지 않은 제품(에어프라이어 조리) · 420g×4봉",
    "how_to": "옥션 상품쿠폰 적용 25,420원 → 삼성/BC카드 7% 즉시할인(2만원 이상, 최대 1만원) 적용 시 23,640원",
    "coupon_links": [
@@ -160,7 +161,7 @@
    ],
    "saving": "평균가보다 약 4,520원(12%) 저렴",
    "shipping": "로켓배송 · 무료배송",
-   "note": "130g×48개 · 100g당 500원 · 내일(11/27) 도착",
+   "note": "130g×48개 · 100g당 500원 · 로켓배송",
    "how_to": "쿠팡 31,200원 · 쿠폰 없이 이 가격",
    "coupon_links": [],
    "url": "https://www.coupang.com/vp/products/5829376555?itemId=28457936519&vendorItemId=85172281764",
@@ -192,26 +193,26 @@
    "linkType": "product"
   },
   {
-   "id": "food-gomgom-vienna-sausage-1kg",
+   "id": "food-tofumyeon-180x5",
    "category": "food",
    "subCategory": "canned",
    "mall": "쿠팡",
-   "tag": "골드박스 하루특가",
-   "title": "곰곰 칼집 비엔나 소시지 1kg",
-   "price": 8910,
-   "priceText": "8,910원",
-   "unit": "10g당 89원",
-   "was": "곰곰 행사가 8,910원 (어제의 와우 추가할인 종료)",
+   "tag": "골드박스 58%",
+   "title": "마이노멀 밀가루 ZERO 두부면 180g 5개",
+   "price": 10330,
+   "priceText": "10,330원 (와우회원가)",
+   "unit": "1팩(180g)당 2,066원 (100g당 1,148원)",
+   "was": "정가 24,900원 → 58% 할인 12,340원 → 와우회원가 10,330원",
    "refs": [
-    "네이버 쇼핑 최저가 19,300원(7곳, 유사규격) — 10g당 193원",
-    "직전 골드박스 특가 주기 약 14일(다음 12/10 전후)"
+    "랭킹박스 8일 가격 기록 평균 14,234원 · 최고 15,900원",
+    "직전 특가 10/29 12,820원 · 리뷰 8,141건(평점 4.5)"
    ],
-   "saving": "네이버 최저가(10g당 193원) 대비 10g당 104원 저렴",
-   "shipping": "로켓프레시 · 15,000원 이상 무료배송 · 내일(금) 11/27 새벽 7시 전 도착(밤 12시 전 주문 시)",
-   "note": "냉장 1kg · 고기함량 54%(돼지고기 18%) · 소비기한 2026-12-11 이후 · 리뷰 5만 7,559건",
-   "how_to": "쿠팡 8,910원 · 쿠폰 없이 이 가격 (로켓프레시 15,000원 이상 무료배송)",
+   "saving": "평균가(14,234원)보다 3,904원(27%), 일반 판매가(12,340원)보다도 2,014원 저렴",
+   "shipping": "무료배송 · 오늘(금) 오후 8시 전 도착(오전 9시 전 주문 시)",
+   "note": "180g×5팩 · 글루텐프리 두부면(한 팩 40kcal대) · 소비기한 2027-05-20 이후 · 리뷰 8,141건",
+   "how_to": "쿠팡 와우회원 10,330원 (일반 12,340원) · 쿠폰 없이 이 가격",
    "coupon_links": [],
-   "url": "https://www.coupang.com/vp/products/5890610169?itemId=10357252789&vendorItemId=77639416097",
+   "url": "https://www.coupang.com/vp/products/9334833111?itemId=27679495344",
    "linkLabel": "쿠팡에서 구매",
    "linkType": "product"
   },
@@ -263,32 +264,26 @@
    "linkType": "product"
   },
   {
-   "id": "food-sprite-zero-350-24",
+   "id": "food-ginger-syrup-600",
    "category": "food",
    "subCategory": "drink",
    "mall": "쿠팡",
-   "tag": "와우 39%",
-   "title": "스프라이트 제로 사이다 350ml 24개",
-   "price": 13980,
-   "priceText": "13,980원 (와우회원가)",
-   "unit": "100ml당 119원 (캔당 417원)",
-   "was": "정가 23,000원 → 와우회원 39% 할인 13,980원 (일반 16,260원)",
+   "tag": "골드박스 60%",
+   "title": "황금이네 생강청 600g (생강 70%·비정제원당 30%)",
+   "price": 13260,
+   "priceText": "13,260원 (와우회원가)",
+   "unit": "10g당 221원",
+   "was": "정가 33,200원 → 55% 할인 14,900원 → 와우회원가 13,260원",
    "refs": [
-    "쿠스피 90일 평균 14,811원",
-    "프라이스토리 30일 평균 14,493원",
-    "역대 최저 11,990원"
+    "랭킹박스 8일 가격 기록 평균 18,525원 · 최고 19,900원",
+    "골드박스 7회 특가 이력 중 최저가(직전 특가 18,900~19,900원대) · 리뷰 6,676건(평점 5.0)"
    ],
-   "saving": "90일 평균 14,811원보다 약 830원(6%) 저렴 · 프라이스토리 30일 평균 14,493원보다 513원 저렴",
-   "shipping": "로켓배송 · 무료배송 · 새벽도착",
-   "note": "350ml×24캔 · 사이다 중 100ml당 단가 최저급 · 소비기한 2027-07-31 이후",
-   "how_to": "쿠팡 와우회원 13,980원 (일반 16,260원) · 어제까지의 와우쿠폰 3,000원 특가는 종료",
-   "coupon_links": [
-    {
-     "label": "쿠팡 상품페이지에서 와우쿠폰 받기",
-     "url": "https://www.coupang.com/vp/products/9391860017?itemId=24339427562&vendorItemId=88377301288"
-    }
-   ],
-   "url": "https://www.coupang.com/vp/products/9391860017?itemId=24339427562&vendorItemId=88377301288",
+   "saving": "평균가(18,525원)보다 5,265원(28%) 저렴 · 최근 8일 기록 중 최저가",
+   "shipping": "무조건 무료배송 · 내일(토) 11/28 도착",
+   "note": "26년산 햇생강 · 물 없이 생강 70%+비정제원당 30% · 소비기한 2028-10-07 이후 · 겨울 생강차·생강라떼용",
+   "how_to": "쿠팡 와우회원 13,260원 (일반 14,900원) · 쿠폰 없이 이 가격",
+   "coupon_links": [],
+   "url": "https://www.coupang.com/vp/products/7958715512",
    "linkLabel": "쿠팡에서 구매",
    "linkType": "product"
   },
@@ -406,6 +401,29 @@
    "how_to": "쿠팡 와우회원 2개 기획 7,000원 · 쿠폰 없이 이 가격",
    "coupon_links": [],
    "url": "https://www.coupang.com/vp/products/1601751214?itemId=22948704040&vendorItemId=86285548424",
+   "linkLabel": "쿠팡에서 구매",
+   "linkType": "product"
+  },
+  {
+   "id": "living-nard-shampoo-1l",
+   "category": "living",
+   "mall": "쿠팡",
+   "tag": "와우 61%",
+   "title": "나드 리프레쉬 퍼퓸드 샴푸 화이트머스크향 1L",
+   "price": 6940,
+   "priceText": "6,940원 (와우회원가)",
+   "unit": "100ml당 694원",
+   "was": "정가 18,000원 → 51% 할인 8,900원 → 와우회원가 6,940원",
+   "refs": [
+    "랭킹박스 31일 가격 기록 평균 9,239원 · 최고 12,400원 · 오늘 추적 최저",
+    "리뷰 14,787건(평점 5.0, 향 만족도 77% '아주 만족')"
+   ],
+   "saving": "31일 평균(9,239원)보다 2,299원(25%) 저렴 · 최근 31일 기록 중 최저가",
+   "shipping": "무료배송 · 오늘(금) 오후 8시 전 도착(오전 9시 전 주문 시)",
+   "note": "화이트머스크향 1L 펌프형 · 사용기한 2028-03-23 이후 · 온 가족용 대용량",
+   "how_to": "쿠팡 와우회원 6,940원 (일반 8,900원) · 쿠폰 없이 이 가격",
+   "coupon_links": [],
+   "url": "https://www.coupang.com/vp/products/7844313513?itemId=21363226407&vendorItemId=88420685404",
    "linkLabel": "쿠팡에서 구매",
    "linkType": "product"
   },
@@ -649,34 +667,6 @@
    "linkType": "product"
   },
   {
-   "id": "living-milli-sensor-bin",
-   "category": "living",
-   "mall": "오늘의집",
-   "tag": "오늘의딜 46%",
-   "title": "하우스레시피 밀리 멀티 살균 센서 휴지통 20L/30L",
-   "price": 59900,
-   "priceText": "59,900원",
-   "unit": "20L/30L 선택",
-   "was": "정가 111,900원 → 오늘의집 단독 46% 할인 59,900원",
-   "refs": [
-    "오늘의집 정가 111,900원",
-    "리뷰 4.8(1만 1,645건)"
-   ],
-   "saving": "정가 대비 52,000원(46%) 저렴",
-   "shipping": "무료배송 · 12시 전 결제 시 오늘 출발 · 카카오페이 6개월 무이자",
-   "note": "12시간마다 오존 자동살균 · 센서 개폐 · 기저귀 냄새 관리에 적합 · 리뷰 1만 1,670건",
-   "how_to": "오늘의집 단독가 59,900원 (어제 적용되던 상품쿠폰은 종료) · 카카오페이 6개월 무이자",
-   "coupon_links": [
-    {
-     "label": "오늘의집 상품페이지에서 쿠폰 받기",
-     "url": "https://ohou.se/productions/3400990/selling"
-    }
-   ],
-   "url": "https://ohou.se/productions/3400990/selling",
-   "linkLabel": "오늘의집에서 구매",
-   "linkType": "product"
-  },
-  {
    "id": "living-basicton-comforter-set",
    "category": "living",
    "mall": "오늘의집",
@@ -761,7 +751,7 @@
    ],
    "saving": "3주 평균 10,175원보다 약 1,155원(11%) 저렴",
    "shipping": "로켓배송 · 무료배송",
-   "note": "100매×10팩 · 1매당 9원 · 내일(11/27) 도착",
+   "note": "100매×10팩 · 1매당 9원 · 로켓배송",
    "how_to": "쿠팡 와우회원 9,020원 (일반 9,300원)",
    "coupon_links": [],
    "url": "https://www.coupang.com/vp/products/9425934464?itemId=28155004948&vendorItemId=3517697980",
@@ -787,34 +777,6 @@
    "how_to": "오늘의집 51% 할인 26,900원 · 다른 상품과 30,000원 이상 담으면 배송비 무료",
    "coupon_links": [],
    "url": "https://store.ohou.se/goods/3492763",
-   "linkLabel": "오늘의집에서 구매",
-   "linkType": "product"
-  },
-  {
-   "id": "baby-aveeno-night-balm-2pack",
-   "category": "baby",
-   "mall": "오늘의집",
-   "tag": "55% + 쿠폰",
-   "title": "아비노베이비 더멕사 아토 나이트밤 312g 2개 + 데일리로션 30g 증정",
-   "price": 37440,
-   "priceText": "37,440원 (토스 결제할인 적용)",
-   "unit": "1개당 18,720원",
-   "was": "정가 92,800원 → 55% 할인 41,600원 → 토스페이 10% 결제할인 -4,160원",
-   "refs": [
-    "오늘의집 정가 92,800원",
-    "어제 적용되던 추가쿠폰·토스 결제할인은 오늘 종료"
-   ],
-   "saving": "정가 대비 55,360원(60%) 저렴",
-   "shipping": "무료배송 · 12/2(수) 이내 도착",
-   "note": "312g×2 + 증정 AB 데일리로션 30g · 리뷰 5.0(554건)",
-   "how_to": "상품페이지 특가 41,600원 → 결제 단계에서 토스 10% 결제할인 적용 시 37,440원",
-   "coupon_links": [
-    {
-     "label": "오늘의집 상품페이지에서 쿠폰 받기",
-     "url": "https://store.ohou.se/goods/1091130"
-    }
-   ],
-   "url": "https://store.ohou.se/goods/1091130",
    "linkLabel": "오늘의집에서 구매",
    "linkType": "product"
   },
@@ -859,29 +821,6 @@
    "coupon_links": [],
    "url": "https://www.uniqlo.com/kr/ko/products/E487348-000/00",
    "linkLabel": "유니클로에서 구매",
-   "linkType": "product"
-  },
-  {
-   "id": "travel-wawa-pension-dec3",
-   "category": "travel",
-   "mall": "여기어때",
-   "tag": "12/3 1박",
-   "title": "가평 스테이 와와펜션 A5 복층 퀸베드·프라이빗BBQ (12/3 목 1박)",
-   "price": 46060,
-   "priceText": "46,060원 (1박)",
-   "unit": "기준 2인 · 최대 4인",
-   "was": "정가 90,000원 → 반짝특가 6% 쿠폰 적용가 46,060원",
-   "refs": [
-    "정가 90,000원",
-    "회원가 적용"
-   ],
-   "saving": "정가 대비 43,940원(49%) 저렴",
-   "shipping": null,
-   "note": "12/3(목)~12/4(금) · 입실 15시/퇴실 11시 · 11/27 23:59까지 무료취소 · 평점 9.8(127명) · 계곡 앞 복층형 프라이빗BBQ",
-   "how_to": "여기어때 반짝특가 6% 쿠폰 적용가 46,060원 (어제의 10,000원 쿠폰 특가는 종료)",
-   "coupon_links": [],
-   "url": "https://www.yeogi.com/domestic-accommodations/91847?checkIn=2026-12-03&checkOut=2026-12-04&adultCount=2",
-   "linkLabel": "여기어때에서 예약",
    "linkType": "product"
   },
   {
