@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 3,
   "date": "2026-11-27",
   "updatedAt": "2026-11-27T09:05:00+09:00",
   "malls": [
@@ -286,7 +286,24 @@
       ],
       "url": "https://itempage3.auction.co.kr/DetailView.aspx?ItemNo=C756440170",
       "linkLabel": "옥션에서 구매",
-      "linkType": "product"
+      "linkType": "product",
+      "priceCondition": "상품쿠폰 + 삼성·BC카드 7%",
+      "priceOffers": [
+        {
+          "mall": "G마켓",
+          "price": 29240,
+          "url": "https://item.gmarket.co.kr/Item?goodsCode=4776546513",
+          "checkedOn": "2026-11-26",
+          "sourceUrl": "https://dealbago.com/deal/12308362"
+        },
+        {
+          "mall": "11번가",
+          "price": 30370,
+          "url": "https://www.11st.co.kr/products/9417551955",
+          "checkedOn": "2026-11-26",
+          "sourceUrl": "https://dealbago.com/deal/12308362"
+        }
+      ]
     },
     {
       "id": "food-yangban-hyeonmi-130x48",
@@ -453,7 +470,16 @@
       "coupon_links": [],
       "url": "https://www.coupang.com/vp/products/9536213705?itemId=22524815698&vendorItemId=91575579364",
       "linkLabel": "쿠팡에서 구매",
-      "linkType": "product"
+      "linkType": "product",
+      "priceOffers": [
+        {
+          "mall": "G마켓",
+          "price": 24300,
+          "url": "https://item.gmarket.co.kr/Item?goodsCode=4743992414",
+          "shipping": "무료배송",
+          "checkedOn": "2026-11-27"
+        }
+      ]
     },
     {
       "id": "food-maeilbio-greek-yogurt-400x6",
@@ -476,7 +502,24 @@
       "coupon_links": [],
       "url": "https://www.musinsa.com/products/5219766",
       "linkLabel": "무신사에서 구매",
-      "linkType": "product"
+      "linkType": "product",
+      "priceCondition": "무진장 쿠폰가",
+      "priceOffers": [
+        {
+          "mall": "11번가",
+          "price": 26240,
+          "url": "https://www.11st.co.kr/products/9204047072",
+          "shipping": "무료배송",
+          "checkedOn": "2026-11-27"
+        },
+        {
+          "mall": "G마켓",
+          "price": 29800,
+          "url": "https://item.gmarket.co.kr/Item?goodsCode=4685783083",
+          "shipping": "무료배송",
+          "checkedOn": "2026-11-27"
+        }
+      ]
     },
     {
       "id": "food-theprotein-darkchoco-12",
@@ -500,7 +543,25 @@
       "coupon_links": [],
       "url": "https://www.coupang.com/vp/products/9165375222?itemId=27003819134&vendorItemId=93972516698",
       "linkLabel": "쿠팡에서 구매",
-      "linkType": "product"
+      "linkType": "product",
+      "priceOffers": [
+        {
+          "mall": "11번가",
+          "price": 29790,
+          "url": "https://www.11st.co.kr/products/8884121768",
+          "shipping": "무료배송",
+          "condition": "쿠폰가",
+          "checkedOn": "2026-11-27"
+        },
+        {
+          "mall": "G마켓",
+          "price": 30240,
+          "url": "https://item.gmarket.co.kr/Item?goodsCode=4630710785",
+          "shipping": "무료배송",
+          "condition": "쿠폰가",
+          "checkedOn": "2026-11-27"
+        }
+      ]
     },
     {
       "id": "food-frozen-chicken-nugget-harim-1p2",
@@ -524,7 +585,16 @@
       "coupon_links": [],
       "url": "https://www.coupang.com/vp/products/4567751809?itemId=5575412259",
       "linkLabel": "쿠팡에서 구매",
-      "linkType": "product"
+      "linkType": "product",
+      "priceOffers": [
+        {
+          "mall": "11번가",
+          "price": 17800,
+          "url": "https://www.11st.co.kr/products/8912362617",
+          "shipping": "배송비 3,000원",
+          "checkedOn": "2026-11-27"
+        }
+      ]
     },
     {
       "id": "food-mealkit-awhome-jeonju-bibimbap-310x2",
