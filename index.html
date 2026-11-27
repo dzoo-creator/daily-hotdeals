@@ -521,6 +521,10 @@
     .card{padding:13px 15px 5px}
     .card:has(> .buy:last-child){padding-bottom:14px}
   }
+  .store-name{display:inline-flex;gap:5px;align-items:center;vertical-align:middle}
+  .store-icon{display:block;flex:none;width:20px;height:20px;object-fit:contain;border-radius:4px;background:#fff}
+  .card-head .mall{order:-1;margin:0 2px 0 0;color:var(--ink);font-size:13px;font-weight:750}
+  .offer-shop .store-icon{width:18px;height:18px}
   @media (prefers-reduced-motion: reduce){
     *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important}
   }
@@ -761,6 +765,32 @@
   }
 
   /* ── offers ───────────────────────────── */
+  // Domain names identify the retailer even when deal files use an alternate spelling.
+  var storefronts = [
+    ['www.coupang.com', ['쿠팡', 'coupang']],
+    ['www.ssg.com', ['ssg', 'ssg.com', 'ssg닷컴', '쓱', '쓱닷컴', '신세계몰', '이마트몰']],
+    ['www.gmarket.co.kr', ['지마켓', 'gmarket', 'gmarket.co.kr']],
+    ['www.auction.co.kr', ['옥션', 'auction']],
+    ['ohou.se', ['오늘의집', '오하우스', 'ohouse']],
+    ['shopping.naver.com', ['네이버', '네이버쇼핑', '네이버플러스스토어', '네이버스마트스토어', '스마트스토어', 'naver']],
+    ['www.11st.co.kr', ['11번가', '11st']],
+    ['www.kurly.com', ['컬리', '마켓컬리', 'kurly']],
+    ['www.musinsa.com', ['무신사', 'musinsa']],
+    ['www.uniqlo.com', ['유니클로', 'uniqlo']],
+    ['www.yeogi.com', ['여기어때', 'yeogi']]
+  ];
+  var logoDomains = new Map();
+  storefronts.forEach(function (store) {
+    store[1].forEach(function (alias) { logoDomains.set(alias, store[0]); });
+  });
+
+  function storeNameHTML(name) {
+    var domain = logoDomains.get(mallKey(name));
+    var icon = domain ? '<img class="store-icon" width="20" height="20" alt="" referrerpolicy="no-referrer" src="https://www.google.com/s2/favicons?sz=64&amp;domain=' +
+      domain + '" onerror="this.hidden=true">' : '';
+    return '<span class="store-name">' + icon + '<span>' + esc(name) + '</span></span>';
+  }
+
   function mallKey(name) {
     var key = typeof name === 'string' ? name.trim().toLowerCase().replace(/\s+/g, '') : '';
     return key === 'g마켓' ? '지마켓' : key;
@@ -968,7 +998,7 @@
     return '<li><' + tag + ' class="' + (rank ? 'offer-row' : 'offer-single') + '"' +
       (url ? ' href="' + esc(url) + '" target="_blank" rel="noopener noreferrer"' : '') + '>' +
       (rank ? '<span class="offer-rank">' + rank + '위</span>' : '') +
-      '<span class="offer-shop">' + esc(offer.mall) +
+      '<span class="offer-shop">' + storeNameHTML(offer.mall) +
       '<small class="offer-meta">' + esc(meta) + '</small></span>' +
       '<span class="offer-amount">' + won.format(amount === null ? offer.price : amount) + '원</span>' +
       (url ? '<span class="offer-action">' + (offer.linkType === 'comparison' ? '비교표' :
@@ -1066,7 +1096,7 @@
       '<div class="card-head">' +
         '<span class="cat cat-' + cat.cls + '">' + cat.label + '</span>' +
         (sub ? '<span class="subcat" title="' + esc(sub.desc) + '">' + esc(sub.label) + '</span>' : '') +
-        (best.mall ? '<span class="mall">' + esc(best.mall) + '</span>' : '') +
+        (best.mall ? '<span class="mall">' + storeNameHTML(best.mall) + '</span>' : '') +
         (best.primary && d.tag ? '<span class="tag">' + esc(d.tag) + '</span>' : '') +
         '<button class="wish' + (on ? ' on' : '') + '" type="button" data-wish="' + esc(d.id) + '"' +
           ' aria-pressed="' + on + '" aria-label="' + (on ? '찜 해제' : '찜하기') + '">' +
