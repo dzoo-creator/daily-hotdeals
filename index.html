@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>오늘의 핫딜 · 쇼핑몰 가격 비교</title>
-<meta name="description" content="매일 아침 업데이트되는 육아·생활·음식·의류 핫딜 모음">
-<meta name="theme-color" content="#ffffff">
+<meta name="description" content="생필품·먹거리·육아용품과 여행 특가의 평균 판매가, 현재가, 판매처별 가격을 비교하세요.">
+<meta name="theme-color" content="#163d31">
 <meta name="color-scheme" content="light">
 <meta name="format-detection" content="telephone=no">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -444,6 +444,83 @@
     .wrap{padding-top:9px}
     .list-head{margin-bottom:6px}
   }
+  /* Grocery price board */
+  :root{
+    --bg:#f5f3eb;--card:#fffefa;--ink:#222d27;--ink-2:#59665c;
+    --line:#dcded1;--accent:#225b44;--accent-deep:#174833;--price:#173e30;
+    --radius:18px;
+  }
+  .hero{
+    background:#163d31;color:#faf9ea;border:0;
+    padding:calc(22px + env(safe-area-inset-top)) 18px 18px;
+  }
+  .mark{border:0;background:#d4ed91;color:#173e30;transform:rotate(-5deg)}
+  .mark svg{transform:rotate(5deg)}
+  h1{color:#fffdf3;letter-spacing:-.065em;line-height:1.1}
+  .date-line,.date-line .upd{color:#c8d9c9;font-size:11.5px}
+  .date-line .dot{background:#99b29c}
+  .icon-btn{color:#e6efdb;background:transparent;border-color:#577565}
+  .search{background:#fffef6;border:0;border-radius:12px}
+  .search input::placeholder,.search svg{color:#657269}
+  .toolbar{background:#fffef9;border-color:var(--line)}
+  .tab[aria-pressed="true"]{background:#e9f1d7;border-color:#cddabc}
+  .tab,.tab .n,.chip.sub .n{color:#5c665d}
+  .exclude,.mall-filter{border-color:var(--line);background:#fffef9;color:#384b3d}
+  .exclude:has(input:checked){background:#e9f1d7;border-color:#adc494;color:#234e32}
+  .list-head{display:flex;align-items:baseline;justify-content:flex-start;gap:8px;flex-wrap:wrap;margin:6px 0 12px}
+  .list-title{margin:0;font-size:22px;line-height:1.3;letter-spacing:-.06em;color:#23382b}
+  #resultCount{color:#596754;font-size:12px;font-weight:700}
+  .list-head .reset{margin-left:auto}
+  .card{background:var(--card);border:1px solid #d8dcce;box-shadow:0 2px 7px #283a2110}
+  .card-head{min-height:29px;gap:6px}
+  .cat{padding:3px 8px;border-radius:5px;line-height:1.4}
+  .cat-food{color:#824222;background:#fae3c8}
+  .cat-living{color:#305b42;background:#e2edda}
+  .cat-baby{color:#844a57;background:#f5dfe3}
+  .subcat,.tag{background:transparent;border:0;padding:0;color:#677266}
+  .mall{color:#435846;font-size:12px}
+  .wish{color:#627364}
+  .title{font-size:clamp(18px,2.2vw,22px);line-height:1.36;letter-spacing:-.055em;margin-top:8px}
+  .price-line{margin-top:12px;gap:8px}
+  .price{font-size:clamp(29px,5vw,35px);line-height:1.05;letter-spacing:-.055em}
+  .price-note{color:#617061}
+  .history{
+    margin-top:11px;gap:4px;padding:10px 12px;background:#f1f5e6;
+    border-radius:2px 9px 9px 2px;border-left:3px solid #87a15a;color:#465b43;
+  }
+  .history strong{display:flex;align-items:center;gap:7px;color:#294e2d;font-size:14px;flex-wrap:wrap}
+  .drop-rate{padding:2px 7px;background:#d9eab3;border-radius:5px;font-size:14px;font-variant-numeric:tabular-nums}
+  .history small{font-size:11px}
+  .history a{color:inherit;text-underline-offset:2px}
+  .buy{background:var(--accent);color:white;border-radius:9px;justify-content:space-between;padding-inline:14px}
+  .buy .arrow{font-size:16px}
+  .buy.soft,.buy.soft:hover,.coupon{background:#eff3e7;border-color:#d0dbc7;color:#2d553a}
+  .details{margin-top:8px;border-color:var(--line);color:#445548}
+  .details + .details{margin-top:0}
+  .details summary{min-height:40px}
+  .rank-details summary{color:var(--accent-deep)}
+  .offer-block{margin:1px 0 10px}
+  .offer-row,.offer-single{background:#fafaf5;border-color:var(--line)}
+  .offer-list li:first-child .offer-row{background:#eef4e2;border-color:#cadab7}
+  .offer-rank{background:#e8ecdf}
+  @media(min-width:740px){
+    .hero{display:grid;grid-template-columns:minmax(0,610px) minmax(270px,370px);align-items:center;justify-content:center;gap:20px}
+    .hero .search{margin:0;max-width:none}
+    .hero .hero-top{max-width:none}
+    .wrap{padding-top:22px}
+  }
+  @media(max-width:640px){
+    .hero{padding:calc(13px + env(safe-area-inset-top)) 15px 11px}
+    .hero h1{font-size:23px}
+    .search{margin-top:10px}
+    .tabs{border-color:var(--line)}
+    .tab[aria-pressed="true"]{background:transparent;box-shadow:inset 0 -3px var(--accent)}
+    .filter-row{padding-block:3px}
+    .list-title{font-size:19px}
+    .wrap{padding-inline:12px}
+    .card{padding:13px 15px 5px}
+    .card:has(> .buy:last-child){padding-bottom:14px}
+  }
   @media (prefers-reduced-motion: reduce){
     *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important}
   }
@@ -488,6 +565,7 @@
 
 <main class="wrap">
   <div class="list-head">
+    <h2 id="listTitle" class="list-title">오늘의 가격 하락</h2>
     <span id="resultCount" aria-live="polite">불러오는 중</span>
     <button class="reset" id="resetFilter" type="button" hidden>필터 초기화</button>
   </div>
@@ -930,11 +1008,11 @@
     var rate = saving.ratio * 100;
     var discount = rate >= 1 ? Math.floor(rate) + '%' : '<span aria-label="1% 미만">1% 미만</span>';
     return '<div class="history">' +
-      '<strong>' + (history.approximate ? '약 ' : '') + won.format(saving.difference) + '원 (' + discount + ') 저렴</strong>' +
-      '<span>' + esc(offer.mall) + ' · ' + (travel ? '같은 예약 조건' : '상품가 기준') +
-      (offer.condition ? ' · ' + esc(offer.condition) : '') + '</span>' +
-      '<span>' + esc(history.period) + ' 평균 ' + (history.approximate ? '약 ' : '') + won.format(saving.average) +
-      '원 → 현재 ' + won.format(offer.price) + '원 · ' + source + '</span></div>';
+      '<strong><b class="drop-rate">↓ ' + discount + '</b>평균보다 ' + (history.approximate ? '약 ' : '') + won.format(saving.difference) + '원 저렴</strong>' +
+      '<span>' + esc(offer.mall) + ' · ' + esc(history.period) + ' 평균 ' + (history.approximate ? '약 ' : '') + won.format(saving.average) +
+      '원 → 현재 ' + won.format(offer.price) + '원 · ' + source + '</span>' +
+      '<small>' + (travel ? '같은 예약 조건' : '상품가 기준') +
+      (offer.condition ? ' · ' + esc(offer.condition) : '') + '</small></div>';
   }
 
   function buyHTML(offer) {
@@ -978,17 +1056,16 @@
     var price = total !== null ? won.format(total) + '원' :
       best.priceText || (best.price !== null ? won.format(best.price) + '원' : '가격 확인');
     var bestMeta = offerMeta(best, travel);
-    var priceHTML = ranks || '<div class="price-line">' +
+    var priceHTML = '<div class="price-line">' +
       '<span class="price' + (best.price === null ? ' event' : '') + '">' + esc(price) + '</span>' +
       (total !== null ? '<span class="unit">' + (travel ? '필수비용 포함' : '배송비 포함') + '</span>' : '') +
       (best.primary && d.unit ? '<span class="unit">' + esc(d.unit) + '</span>' : '') + '</div>' +
-      (bestMeta ? '<p class="price-note">' + esc(bestMeta) + '</p>' : '') +
-      buyHTML(best);
+      (bestMeta ? '<p class="price-note">' + esc(bestMeta) + '</p>' : '');
 
     return '<article class="card" data-id="' + esc(d.id) + '" style="--i:' + Math.min(i, 11) + '">' +
       '<div class="card-head">' +
-        '<span class="cat cat-' + cat.cls + '">' + cat.icon + ' ' + cat.label + '</span>' +
-        (sub ? '<span class="subcat" title="' + esc(sub.desc) + '"><span aria-hidden="true">' + sub.icon + '</span>' + esc(sub.label) + '</span>' : '') +
+        '<span class="cat cat-' + cat.cls + '">' + cat.label + '</span>' +
+        (sub ? '<span class="subcat" title="' + esc(sub.desc) + '">' + esc(sub.label) + '</span>' : '') +
         (best.mall ? '<span class="mall">' + esc(best.mall) + '</span>' : '') +
         (best.primary && d.tag ? '<span class="tag">' + esc(d.tag) + '</span>' : '') +
         '<button class="wish' + (on ? ' on' : '') + '" type="button" data-wish="' + esc(d.id) + '"' +
@@ -997,8 +1074,10 @@
         '</button>' +
       '</div>' +
       '<h2 class="title">' + esc(d.title) + '</h2>' +
-      savingHTML(entry.saving, travel) +
       priceHTML +
+      savingHTML(entry.saving, travel) +
+      buyHTML(best) +
+      (ranks ? '<details class="details rank-details"><summary>판매처별 가격 비교</summary>' + ranks + '</details>' : '') +
       detailsHTML(d, showPrimary) +
     '</article>';
   }
@@ -1024,7 +1103,9 @@
     if (state.cat === 'hot') items.sort(function (a, b) { return b.saving.ratio - a.saving.ratio; });
     syncControls(entries);
     var subNow = state.sub !== 'all' ? SUB_META[state.sub] : null;
-    resultEl.textContent = items.length + (state.cat === 'hot' ? '개 · 가격 기록 평균 대비' : '개 딜') +
+    $('listTitle').textContent = state.q ? '검색 결과' : state.cat === 'hot' ? '오늘의 가격 하락' :
+      state.cat === 'wish' ? '찜한 딜' : state.cat === 'all' ? '전체 상품' : CAT_META[state.cat].label;
+    resultEl.textContent = items.length + '개' +
       (state.mall !== 'all' ? ' · ' + mallEl.options[mallEl.selectedIndex].text : '') +
       (subNow ? ' · ' + subNow.label : '') +
       (state.excludeCoupang ? ' · 쿠팡 제외' : '');
