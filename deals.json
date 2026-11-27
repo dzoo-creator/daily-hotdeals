@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "date": "2026-11-27",
   "updatedAt": "2026-11-27T09:05:00+09:00",
   "malls": [
@@ -34,7 +34,12 @@
       "coupon_links": [],
       "url": "https://www.coupang.com/vp/products/8436537287?itemId=24400101850",
       "linkLabel": "쿠팡에서 구매",
-      "linkType": "product"
+      "linkType": "product",
+      "priceHistory": {
+        "averagePrice": 6090,
+        "period": "3주",
+        "source": "로우차트"
+      }
     },
     {
       "id": "food-pork-hind-mince-400",
@@ -58,7 +63,12 @@
       "coupon_links": [],
       "url": "https://www.coupang.com/vp/products/8049284703?itemId=22568563778",
       "linkLabel": "쿠팡에서 구매",
-      "linkType": "product"
+      "linkType": "product",
+      "priceHistory": {
+        "averagePrice": 5310,
+        "period": "3주",
+        "source": "로우차트"
+      }
     },
     {
       "id": "food-chicken-thigh-diced-500",
@@ -82,7 +92,12 @@
       "coupon_links": [],
       "url": "https://www.coupang.com/vp/products/9608009961?itemId=28683880372",
       "linkLabel": "쿠팡에서 구매",
-      "linkType": "product"
+      "linkType": "product",
+      "priceHistory": {
+        "averagePrice": 6632,
+        "period": "3주",
+        "source": "로우차트"
+      }
     },
     {
       "id": "food-pork-shoulder-suyuk-1kg",
@@ -106,7 +121,12 @@
       "coupon_links": [],
       "url": "https://www.coupang.com/vp/products/5393665856?itemId=8050376211",
       "linkLabel": "쿠팡에서 구매",
-      "linkType": "product"
+      "linkType": "product",
+      "priceHistory": {
+        "averagePrice": 14005,
+        "period": "3주",
+        "source": "로우차트"
+      }
     },
     {
       "id": "food-tangerine-blackhole-3kg",
@@ -130,7 +150,12 @@
       "coupon_links": [],
       "url": "https://www.coupang.com/vp/products/8310814820?itemId=23980908890",
       "linkLabel": "쿠팡에서 구매",
-      "linkType": "product"
+      "linkType": "product",
+      "priceHistory": {
+        "averagePrice": 11078,
+        "period": "3주",
+        "source": "로우차트"
+      }
     },
     {
       "id": "food-banana-delmonte-1p4",
@@ -154,7 +179,12 @@
       "coupon_links": [],
       "url": "https://www.coupang.com/vp/products/6354913981?itemId=16734614225",
       "linkLabel": "쿠팡에서 구매",
-      "linkType": "product"
+      "linkType": "product",
+      "priceHistory": {
+        "averagePrice": 4752,
+        "period": "3주",
+        "source": "로우차트"
+      }
     },
     {
       "id": "food-apple-busa-5kg",
@@ -182,7 +212,8 @@
       ],
       "url": "https://item.gmarket.co.kr/Item?goodscode=4832139525",
       "linkLabel": "지마켓에서 구매",
-      "linkType": "product"
+      "linkType": "product",
+      "shippingCost": 0
     },
     {
       "id": "food-tangerine-jeju-5kg",
@@ -211,7 +242,13 @@
       ],
       "url": "https://www.coupang.com/vp/products/9661792299?itemId=28883919094",
       "linkLabel": "쿠팡에서 구매",
-      "linkType": "product"
+      "linkType": "product",
+      "priceHistory": {
+        "averagePrice": 10464,
+        "period": "5일",
+        "source": "랭킹박스"
+      },
+      "shippingCost": 0
     },
     {
       "id": "food-jongga-yeolmu-2p5x2",
@@ -235,7 +272,13 @@
       "coupon_links": [],
       "url": "https://www.coupang.com/vp/products/4583661822?itemId=19225072781&vendorItemId=86341728279",
       "linkLabel": "쿠팡에서 구매",
-      "linkType": "product"
+      "linkType": "product",
+      "priceHistory": {
+        "averagePrice": 43118,
+        "period": "3주",
+        "source": "로우차트"
+      },
+      "shippingCost": 0
     },
     {
       "id": "food-porkbelly-frozen-1kg",
@@ -258,7 +301,13 @@
       "coupon_links": [],
       "url": "https://www.coupang.com/vp/products/7869708635?itemId=21495469050&vendorItemId=88549381562",
       "linkLabel": "쿠팡에서 구매",
-      "linkType": "product"
+      "linkType": "product",
+      "priceHistory": {
+        "averagePrice": 11800,
+        "period": "3주",
+        "source": "로우차트",
+        "approximate": true
+      }
     },
     {
       "id": "food-maniker-basasak-4pack",
@@ -303,7 +352,8 @@
           "checkedOn": "2026-11-26",
           "sourceUrl": "https://dealbago.com/deal/12308362"
         }
-      ]
+      ],
+      "shippingCost": 0
     },
     {
       "id": "food-yangban-hyeonmi-130x48",
@@ -327,7 +377,13 @@
       "coupon_links": [],
       "url": "https://www.coupang.com/vp/products/5829376555?itemId=28457936519&vendorItemId=85172281764",
       "linkLabel": "쿠팡에서 구매",
-      "linkType": "product"
+      "linkType": "product",
+      "priceHistory": {
+        "averagePrice": 35721,
+        "period": "3주",
+        "source": "로우차트"
+      },
+      "shippingCost": 0
     },
     {
       "id": "food-haepyo-soybeanoil-900x3",
@@ -351,7 +407,13 @@
       "coupon_links": [],
       "url": "https://www.coupang.com/vp/products/487322?itemId=21364582526",
       "linkLabel": "쿠팡에서 구매",
-      "linkType": "product"
+      "linkType": "product",
+      "priceHistory": {
+        "averagePrice": 9551,
+        "period": "3주",
+        "source": "로우차트"
+      },
+      "shippingCost": 0
     },
     {
       "id": "food-tofumyeon-180x5",
@@ -375,7 +437,13 @@
       "coupon_links": [],
       "url": "https://www.coupang.com/vp/products/9334833111?itemId=27679495344",
       "linkLabel": "쿠팡에서 구매",
-      "linkType": "product"
+      "linkType": "product",
+      "priceHistory": {
+        "averagePrice": 14234,
+        "period": "8일",
+        "source": "랭킹박스"
+      },
+      "shippingCost": 0
     },
     {
       "id": "food-icis-water-500x40",
@@ -399,7 +467,8 @@
       "coupon_links": [],
       "url": "https://www.coupang.com/vp/products/9061123177?itemId=29400519123&vendorItemId=91213590376",
       "linkLabel": "쿠팡에서 구매",
-      "linkType": "product"
+      "linkType": "product",
+      "shippingCost": 0
     },
     {
       "id": "food-dongwon-boricha-500x20",
@@ -422,7 +491,8 @@
       "coupon_links": [],
       "url": "https://www.coupang.com/vp/products/2057983357?itemId=3497916607&vendorItemId=71484115677",
       "linkLabel": "쿠팡에서 구매",
-      "linkType": "product"
+      "linkType": "product",
+      "shippingCost": 0
     },
     {
       "id": "food-ginger-syrup-600",
@@ -446,7 +516,13 @@
       "coupon_links": [],
       "url": "https://www.coupang.com/vp/products/7958715512",
       "linkLabel": "쿠팡에서 구매",
-      "linkType": "product"
+      "linkType": "product",
+      "priceHistory": {
+        "averagePrice": 18525,
+        "period": "8일",
+        "source": "랭킹박스"
+      },
+      "shippingCost": 0
     },
     {
       "id": "food-mlekovita-milk-1l-12",
@@ -477,9 +553,11 @@
           "price": 24300,
           "url": "https://item.gmarket.co.kr/Item?goodsCode=4743992414",
           "shipping": "무료배송",
-          "checkedOn": "2026-11-27"
+          "checkedOn": "2026-11-27",
+          "shippingCost": 0
         }
-      ]
+      ],
+      "shippingCost": 0
     },
     {
       "id": "food-maeilbio-greek-yogurt-400x6",
@@ -510,16 +588,19 @@
           "price": 26240,
           "url": "https://www.11st.co.kr/products/9204047072",
           "shipping": "무료배송",
-          "checkedOn": "2026-11-27"
+          "checkedOn": "2026-11-27",
+          "shippingCost": 0
         },
         {
           "mall": "G마켓",
           "price": 29800,
           "url": "https://item.gmarket.co.kr/Item?goodsCode=4685783083",
           "shipping": "무료배송",
-          "checkedOn": "2026-11-27"
+          "checkedOn": "2026-11-27",
+          "shippingCost": 0
         }
-      ]
+      ],
+      "shippingCost": 0
     },
     {
       "id": "food-theprotein-darkchoco-12",
@@ -551,7 +632,8 @@
           "url": "https://www.11st.co.kr/products/8884121768",
           "shipping": "무료배송",
           "condition": "쿠폰가",
-          "checkedOn": "2026-11-27"
+          "checkedOn": "2026-11-27",
+          "shippingCost": 0
         },
         {
           "mall": "G마켓",
@@ -559,9 +641,11 @@
           "url": "https://item.gmarket.co.kr/Item?goodsCode=4630710785",
           "shipping": "무료배송",
           "condition": "쿠폰가",
-          "checkedOn": "2026-11-27"
+          "checkedOn": "2026-11-27",
+          "shippingCost": 0
         }
-      ]
+      ],
+      "shippingCost": 0
     },
     {
       "id": "food-frozen-chicken-nugget-harim-1p2",
@@ -592,9 +676,15 @@
           "price": 17800,
           "url": "https://www.11st.co.kr/products/8912362617",
           "shipping": "배송비 3,000원",
-          "checkedOn": "2026-11-27"
+          "checkedOn": "2026-11-27",
+          "shippingCost": 3000
         }
-      ]
+      ],
+      "priceHistory": {
+        "averagePrice": 12746,
+        "period": "3주",
+        "source": "로우차트"
+      }
     },
     {
       "id": "food-mealkit-awhome-jeonju-bibimbap-310x2",
@@ -618,7 +708,12 @@
       "coupon_links": [],
       "url": "https://www.coupang.com/vp/products/6511159984?itemId=25100130730",
       "linkLabel": "쿠팡에서 구매",
-      "linkType": "product"
+      "linkType": "product",
+      "priceHistory": {
+        "averagePrice": 11033,
+        "period": "3주",
+        "source": "로우차트"
+      }
     },
     {
       "id": "food-drink-anchor-butter-227x3",
@@ -642,7 +737,12 @@
       "coupon_links": [],
       "url": "https://www.coupang.com/vp/products/206818868?itemId=5180154590",
       "linkLabel": "쿠팡에서 구매",
-      "linkType": "product"
+      "linkType": "product",
+      "priceHistory": {
+        "averagePrice": 15900,
+        "period": "3주",
+        "source": "로우차트"
+      }
     },
     {
       "id": "food-canned-ottogi-kongguksu-ramen-135x4",
@@ -671,7 +771,12 @@
       ],
       "url": "https://www.coupang.com/vp/products/22658880?itemId=20022857179",
       "linkLabel": "쿠팡에서 구매",
-      "linkType": "product"
+      "linkType": "product",
+      "priceHistory": {
+        "averagePrice": 4023,
+        "period": "3주",
+        "source": "로우차트"
+      }
     },
     {
       "id": "food-canned-cj-dongchimi-naengmyeon-4in",
@@ -695,7 +800,12 @@
       "coupon_links": [],
       "url": "https://www.coupang.com/vp/products/8296192875?itemId=335288320",
       "linkLabel": "쿠팡에서 구매",
-      "linkType": "product"
+      "linkType": "product",
+      "priceHistory": {
+        "averagePrice": 8678,
+        "period": "3주",
+        "source": "로우차트"
+      }
     },
     {
       "id": "food-mealkit-mijeongdang-tteokbokki-670x4",
@@ -719,7 +829,12 @@
       "coupon_links": [],
       "url": "https://www.coupang.com/vp/products/9580732566?itemId=28632688904",
       "linkLabel": "쿠팡에서 구매",
-      "linkType": "product"
+      "linkType": "product",
+      "priceHistory": {
+        "averagePrice": 21591,
+        "period": "3주",
+        "source": "로우차트"
+      }
     },
     {
       "id": "food-canned-chilgap-chaltteokbokki-1kgx5",
@@ -743,7 +858,12 @@
       "coupon_links": [],
       "url": "https://www.coupang.com/vp/products/7849678351?itemId=21392488914",
       "linkLabel": "쿠팡에서 구매",
-      "linkType": "product"
+      "linkType": "product",
+      "priceHistory": {
+        "averagePrice": 15870,
+        "period": "3주",
+        "source": "로우차트"
+      }
     },
     {
       "id": "living-kleenex-kitchentowel-140x4",
@@ -766,7 +886,31 @@
       "coupon_links": [],
       "url": "https://www.coupang.com/vp/products/7134558328?itemId=20247515510&vendorItemId=3158599929",
       "linkLabel": "쿠팡에서 구매",
-      "linkType": "product"
+      "linkType": "product",
+      "priceHistory": {
+        "averagePrice": 6581,
+        "period": "49일",
+        "source": "바닥가"
+      },
+      "shippingCost": 0,
+      "priceOffers": [
+        {
+          "mall": "11번가",
+          "price": 4900,
+          "shippingCost": 3000,
+          "shipping": "1팩 기준",
+          "url": "https://www.11st.co.kr/products/6080527891?catalog_no=16634703&lowest_yn=Y",
+          "checkedOn": "2026-11-27"
+        },
+        {
+          "mall": "G마켓",
+          "price": 8820,
+          "condition": "유한킴벌리·블랙프라이데이 쿠폰 적용",
+          "url": "https://item.gmarket.co.kr/Item?goodsCode=1354643367",
+          "checkedOn": "2026-11-27",
+          "shippingCost": 0
+        }
+      ]
     },
     {
       "id": "living-misha-cleansingfoam-2",
@@ -789,7 +933,8 @@
       "coupon_links": [],
       "url": "https://www.coupang.com/vp/products/1601751214?itemId=22948704040&vendorItemId=86285548424",
       "linkLabel": "쿠팡에서 구매",
-      "linkType": "product"
+      "linkType": "product",
+      "shippingCost": 0
     },
     {
       "id": "living-nard-shampoo-1l",
@@ -812,7 +957,13 @@
       "coupon_links": [],
       "url": "https://www.coupang.com/vp/products/7844313513?itemId=21363226407&vendorItemId=88420685404",
       "linkLabel": "쿠팡에서 구매",
-      "linkType": "product"
+      "linkType": "product",
+      "priceHistory": {
+        "averagePrice": 9239,
+        "period": "31일",
+        "source": "랭킹박스"
+      },
+      "shippingCost": 0
     },
     {
       "id": "living-priel-jacquard-mat",
@@ -835,7 +986,8 @@
       "coupon_links": [],
       "url": "https://store.ohou.se/goods/2827091",
       "linkLabel": "오늘의집에서 구매",
-      "linkType": "product"
+      "linkType": "product",
+      "shippingCost": 0
     },
     {
       "id": "living-locknlock-visfree-260x6",
@@ -858,7 +1010,13 @@
       "coupon_links": [],
       "url": "https://www.coupang.com/vp/products/7104715540?itemId=739885107",
       "linkLabel": "쿠팡에서 구매",
-      "linkType": "product"
+      "linkType": "product",
+      "priceHistory": {
+        "averagePrice": 18100,
+        "period": "3주",
+        "source": "로우차트"
+      },
+      "shippingCost": 0
     },
     {
       "id": "living-persil-babygel-1p5x2",
@@ -881,7 +1039,8 @@
       "coupon_links": [],
       "url": "https://www.coupang.com/vp/products/9413975948?itemId=27981810839&vendorItemId=94939577509",
       "linkLabel": "쿠팡에서 구매",
-      "linkType": "product"
+      "linkType": "product",
+      "shippingCost": 0
     },
     {
       "id": "living-ijican-refill-280-10",
@@ -904,7 +1063,8 @@
       "coupon_links": [],
       "url": "https://www.coupang.com/vp/products/1352914251?itemId=13330538925&vendorItemId=70184244029",
       "linkLabel": "쿠팡에서 구매",
-      "linkType": "product"
+      "linkType": "product",
+      "shippingCost": 0
     },
     {
       "id": "living-natureliving-laundry-trolley",
@@ -927,7 +1087,8 @@
       "coupon_links": [],
       "url": "https://ohou.se/productions/304967/selling",
       "linkLabel": "오늘의집에서 구매",
-      "linkType": "product"
+      "linkType": "product",
+      "shippingCost": 0
     },
     {
       "id": "living-saenghwal-kitchen-8L",
@@ -949,7 +1110,8 @@
       "coupon_links": [],
       "url": "https://store.ohou.se/goods/1080156",
       "linkLabel": "오늘의집에서 구매",
-      "linkType": "product"
+      "linkType": "product",
+      "shippingCost": 0
     },
     {
       "id": "living-iriscorea-drawer-box-2",
@@ -972,7 +1134,8 @@
       "coupon_links": [],
       "url": "https://ohou.se/productions/318856/selling",
       "linkLabel": "오늘의집에서 구매",
-      "linkType": "product"
+      "linkType": "product",
+      "shippingCost": 0
     },
     {
       "id": "living-listerine-750x4",
@@ -1000,7 +1163,8 @@
       ],
       "url": "https://store.ohou.se/goods/1088117",
       "linkLabel": "오늘의집에서 구매",
-      "linkType": "product"
+      "linkType": "product",
+      "shippingCost": 0
     },
     {
       "id": "living-drwater-shower-filter",
@@ -1023,7 +1187,8 @@
       "coupon_links": [],
       "url": "https://ohou.se/productions/1384503/selling",
       "linkLabel": "오늘의집에서 구매",
-      "linkType": "product"
+      "linkType": "product",
+      "shippingCost": 0
     },
     {
       "id": "living-cottonliving-towel-10",
@@ -1051,7 +1216,8 @@
       ],
       "url": "https://ohou.se/productions/345755/selling",
       "linkLabel": "오늘의집에서 구매",
-      "linkType": "product"
+      "linkType": "product",
+      "shippingCost": 0
     },
     {
       "id": "living-basicton-comforter-set",
@@ -1074,7 +1240,8 @@
       "coupon_links": [],
       "url": "https://ohou.se/productions/676405/selling",
       "linkLabel": "오늘의집에서 구매",
-      "linkType": "product"
+      "linkType": "product",
+      "shippingCost": 0
     },
     {
       "id": "baby-greenfinger-lotion-300",
@@ -1097,7 +1264,13 @@
       "coupon_links": [],
       "url": "https://www.coupang.com/vp/products/6411096481?itemId=13749050409",
       "linkLabel": "쿠팡에서 구매",
-      "linkType": "product"
+      "linkType": "product",
+      "priceHistory": {
+        "averagePrice": 11651,
+        "period": "3개월",
+        "source": "기존 가격 기록"
+      },
+      "shippingCost": 0
     },
     {
       "id": "baby-baobab-turtleneck",
@@ -1120,7 +1293,14 @@
       "coupon_links": [],
       "url": "https://www.coupang.com/vp/products/6040877021?itemId=11043399786&vendorItemId=78322948537",
       "linkLabel": "쿠팡에서 구매",
-      "linkType": "product"
+      "linkType": "product",
+      "priceHistory": {
+        "averagePrice": 9700,
+        "period": "3주",
+        "source": "로우차트",
+        "approximate": true
+      },
+      "shippingCost": 0
     },
     {
       "id": "baby-bebeang-light-wipes-100x10",
@@ -1143,7 +1323,13 @@
       "coupon_links": [],
       "url": "https://www.coupang.com/vp/products/9425934464?itemId=28155004948&vendorItemId=3517697980",
       "linkLabel": "쿠팡에서 구매",
-      "linkType": "product"
+      "linkType": "product",
+      "priceHistory": {
+        "averagePrice": 10175,
+        "period": "3주",
+        "source": "로우차트"
+      },
+      "shippingCost": 0
     },
     {
       "id": "baby-doubleheart-laundry-2plus2",
@@ -1165,7 +1351,8 @@
       "coupon_links": [],
       "url": "https://store.ohou.se/goods/3492763",
       "linkLabel": "오늘의집에서 구매",
-      "linkType": "product"
+      "linkType": "product",
+      "shippingCost": 3000
     },
     {
       "id": "fashion-uniqlo-pufftech-jacket-479755",
@@ -1187,7 +1374,8 @@
       "coupon_links": [],
       "url": "https://www.uniqlo.com/kr/ko/products/E479755-000/00",
       "linkLabel": "유니클로에서 구매",
-      "linkType": "product"
+      "linkType": "product",
+      "shippingCost": 0
     },
     {
       "id": "fashion-uniqlo-pufftech-vest-487348",
@@ -1208,7 +1396,8 @@
       "coupon_links": [],
       "url": "https://www.uniqlo.com/kr/ko/products/E487348-000/00",
       "linkLabel": "유니클로에서 구매",
-      "linkType": "product"
+      "linkType": "product",
+      "shippingCost": 0
     },
     {
       "id": "travel-sugar-pension-dec3",
